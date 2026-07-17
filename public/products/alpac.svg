@@ -1,10 +1,33 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
-  <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B5E20"/><stop offset="100%" stop-color="#2E7D32"/></linearGradient></defs>
-  <rect x="75" y="10" width="50" height="25" rx="3" fill="#1B5E20"/>
-  <rect x="60" y="30" width="80" height="25" rx="4" fill="#2E7D32"/>
-  <rect x="50" y="55" width="100" height="200" rx="8" fill="url(#b)"/>
-  <rect x="55" y="90" width="90" height="100" rx="4" fill="white" opacity="0.95"/>
-  <text x="100" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#2E7D32">ALPAC</text>
-  <text x="100" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#2E7D32">100 EC</text>
-  <text x="100" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#666">Alfa-sipermetrin</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" fill="none">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B6B27"/>
+      <stop offset="40%" stop-color="#27AE60"/>
+      <stop offset="100%" stop-color="#145A20"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Cap -->
+  <rect x="60" y="8" width="40" height="14" rx="4" fill="#1B6B27"/>
+  <!-- Neck -->
+  <rect x="64" y="20" width="32" height="18" rx="3" fill="#1B6B27"/>
+  <!-- Body - bottle shape with shoulder -->
+  <path d="M40 50 Q40 38 52 38 L108 38 Q120 38 120 50 L120 228 Q120 238 110 238 L50 238 Q40 238 40 228 Z" fill="url(#body)"/>
+  <path d="M40 50 Q40 38 52 38 L68 38 L68 238 L50 238 Q40 238 40 228 Z" fill="url(#shine)"/>
+  <!-- Label -->
+  <rect x="46" y="72" width="68" height="118" rx="5" fill="white"/>
+  <!-- Green stripe top -->
+  <rect x="46" y="72" width="68" height="22" rx="5" fill="#27AE60"/>
+  <text x="80" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="800" fill="white">ALPAC</text>
+  <text x="80" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#1B6B27">100 EC</text>
+  <line x1="52" y1="120" x2="108" y2="120" stroke="#27AE60" stroke-width="0.8" opacity="0.5"/>
+  <text x="80" y="135" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#555">Alfa-sipermetrin</text>
+  <text x="80" y="147" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#555">100 g/l</text>
+  <text x="80" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#888">1 L</text>
+  <!-- Bottom stripe -->
+  <rect x="46" y="176" width="68" height="14" rx="0" fill="#E8F8F0"/>
+  <text x="80" y="186" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="#1B6B27" font-weight="600">INSEKTISID</text>
 </svg>

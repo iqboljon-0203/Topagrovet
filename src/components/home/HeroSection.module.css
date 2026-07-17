@@ -1,0 +1,201 @@
+.hero {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #f5f9f5;
+}
+
+/* Full-bleed background image.
+   The image has: left white area, center animals+bottles, right plants.
+   object-position: center 35% shows the content band of the wide image. */
+.heroBg {
+  object-fit: cover;
+  object-position: center 38%;
+  z-index: 0;
+}
+
+/* Strong white gradient on left so title is always readable.
+   Fade starts at 45% (right of where text ends) going to transparent. */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.93) 28%,
+    rgba(255, 255, 255, 0.55) 42%,
+    rgba(255, 255, 255, 0.0) 58%
+  );
+}
+
+/* Text content — left side on top of overlay */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: max(20px, calc((100vw - 1280px) / 2 + 20px));
+  padding-right: 20px;
+}
+
+.heroTitle {
+  max-width: 600px;
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.18;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.heroHighlight {
+  font-style: normal;
+  color: var(--color-primary);
+  display: block;
+}
+
+.heroSubtitle {
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnPrimary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-gray-800);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(0, 0, 0, 0.20);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnOutline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Trust badges */
+.heroTrust {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: #222;
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-full);
+  padding: 5px 12px 5px 8px;
+  backdrop-filter: blur(4px);
+}
+
+.trustIcon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero { height: 420px; }
+  .heroTitle { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .hero { height: 380px; }
+  .heroBg { object-position: 60% 38%; }
+  .overlay {
+    background: rgba(255, 255, 255, 0.82);
+  }
+  .heroContent { 
+    max-width: 100%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heroTitle { font-size: 1.85rem; text-align: center; }
+  .heroSubtitle { margin-bottom: 14px; text-align: center; font-size: 1.1rem; }
+  .heroButtons { 
+    margin-bottom: 14px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 100%;
+  }
+  .btnPrimary, .btnOutline { 
+    padding: 9px 16px; 
+    font-size: var(--font-size-sm); 
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .heroTrust {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero { height: auto; min-height: 400px; padding: 40px 0; }
+  .heroTitle { font-size: 1.6rem; }
+  .heroSubtitle { font-size: 1rem; }
+  .heroTrust { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; }
+  .trustItem {
+    width: auto;
+    padding: 4px 8px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+  .heroButtons { flex-direction: column; width: 100%; align-items: center; }
+  .btnPrimary, .btnOutline { width: 85%; max-width: 320px; justify-content: center; }
+}

@@ -1,10 +1,31 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
-  <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0D47A1"/><stop offset="100%" stop-color="#1565C0"/></linearGradient></defs>
-  <rect x="75" y="10" width="50" height="25" rx="3" fill="#0D47A1"/>
-  <rect x="60" y="30" width="80" height="25" rx="4" fill="#1565C0"/>
-  <rect x="50" y="55" width="100" height="200" rx="8" fill="url(#b)"/>
-  <rect x="55" y="90" width="90" height="100" rx="4" fill="white" opacity="0.95"/>
-  <text x="100" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1565C0">MS-Penstrep</text>
-  <text x="100" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#1565C0">400</text>
-  <text x="100" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#666">Penitsillin</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" fill="none">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A5276"/>
+      <stop offset="40%" stop-color="#2E86C1"/>
+      <stop offset="100%" stop-color="#154360"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A5276"/>
+      <stop offset="100%" stop-color="#1B4F72"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="58" y="8" width="44" height="16" rx="4" fill="url(#cap)"/>
+  <rect x="62" y="22" width="36" height="18" rx="3" fill="url(#body)"/>
+  <rect x="40" y="38" width="80" height="190" rx="10" fill="url(#body)"/>
+  <rect x="40" y="38" width="28" height="190" rx="10" fill="url(#shine)"/>
+  <rect x="46" y="70" width="68" height="110" rx="5" fill="white"/>
+  <text x="80" y="97" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#1A5276">MS-Penstrep</text>
+  <text x="80" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#1A5276">400</text>
+  <line x1="52" y1="122" x2="108" y2="122" stroke="#2E86C1" stroke-width="1" opacity="0.4"/>
+  <text x="80" y="138" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#666">Penitsillin +</text>
+  <text x="80" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#666">Streptomisin</text>
+  <text x="80" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#666">100ml / 250ml</text>
+  <line x1="117" y1="160" x2="119" y2="160" stroke="white" stroke-width="1.5"/>
+  <line x1="117" y1="140" x2="119" y2="140" stroke="white" stroke-width="1.5"/>
+  <line x1="117" y1="120" x2="119" y2="120" stroke="white" stroke-width="1.5"/>
 </svg>

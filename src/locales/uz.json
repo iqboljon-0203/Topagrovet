@@ -1,0 +1,49 @@
+{
+  "header": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "contact": "Aloqa",
+    "search_placeholder": "Qidiruv...",
+    "marquee": "⭐ Sifatli mahsulotlar – sog'lom hayvon va mo'l hosil garovi!",
+    "catalog": "Katalog"
+  },
+  "footer": {
+    "desc": "\"Top Agro Vet\" MChJ — O'zbekiston qishloq xo'jaligi va veterinariya sohasida ishonchli hamkoringiz. Sifatli va hamyonbop dori vositalari.",
+    "links": "Tezkor havolalar",
+    "catalog": "Katalog",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "contact": "Aloqa",
+    "address": "Toshkent sh., Chilonzor tumani, Bunyodkor shoh ko'chasi 42",
+    "copyright": "Barcha huquqlar himoyalangan."
+  },
+  "home": {
+    "hero_title": "Veterinariya va agro\npreparatlarini ishonchli yetkazib beruvchi",
+    "hero_subtitle": "Fermerlar va dehqonlar uchun eng qulay va sifatli dori vositalari.",
+    "hero_btn_catalog": "Katalogga o'tish",
+    "hero_btn_contact": "Biz bilan bog'lanish",
+    "features_quality": "Yuqori Sifat",
+    "features_quality_desc": "Barcha mahsulotlar sertifikatlangan",
+    "features_assortment": "Keng Assortiment",
+    "features_assortment_desc": "1000+ dan ortiq mahsulotlar",
+    "features_delivery": "Tezkor Yetkazib Berish",
+    "features_delivery_desc": "Respublika bo'ylab kafolatlangan",
+    "features_support": "Mutaxassis Maslahati",
+    "features_support_desc": "Bepul veterinar konsultatsiyasi",
+    "categories_title": "Mahsulotlar Katalogi",
+    "popular_title": "Ommabop Mahsulotlar",
+    "view_all": "Barchasini ko'rish"
+  },
+  "product": {
+    "price": "Narxi",
+    "in_stock": "Omborda mavjud",
+    "volume": "Hajm",
+    "add_to_cart": "Savatga qo'shish",
+    "quick_order": "Tez buyurtma",
+    "download_pdf": "Qo'llanmani yuklab olish (PDF)",
+    "description": "Tavsif",
+    "specifications": "Xususiyatlar",
+    "similar_products": "O'xshash Mahsulotlar"
+  }
+}

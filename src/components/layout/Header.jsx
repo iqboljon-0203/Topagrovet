@@ -2,88 +2,94 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, Search, ChevronDown, Globe, X, Leaf } from 'lucide-react';
+import { Phone, Search, ChevronDown, X, Menu } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Header.module.css';
 
-const navItems = [
-  { label: 'Bosh sahifa', href: '/' },
-  { label: 'Veterinariya', href: '/catalog/veterinariya', hasDropdown: true },
-  { label: 'Agro preparatlar', href: '/catalog/agro-preparatlar', hasDropdown: true },
-  { label: 'Mahsulotlar', href: '/catalog/barchasi' },
-  { label: 'Yangiliklar', href: '#' },
-  { label: 'Biz haqimizda', href: '#' },
-  { label: 'Aloqa', href: '#' },
-];
+function LogoImage({ width = 260, height = 75 }) {
+  return (
+    <Image
+      src="/logo.png"
+      alt="Top Agro Vet logo"
+      width={width}
+      height={height}
+      className={styles.logoImg}
+      priority
+      unoptimized
+    />
+  );
+}
 
-export default function Header({ showSearch = false }) {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchVal, setSearchVal] = useState('');
   const pathname = usePathname();
+  const { t } = useLanguage();
+
+  const navItems = [
+    { label: t('header.home'), href: '/' },
+    { label: t('header.about'), href: '/about' },
+    { label: t('header.news'), href: '/news' },
+    { label: t('header.contact'), href: '/contact' },
+  ];
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 4);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
+  useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerTop}>
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <Leaf size={24} />
-          </div>
-          <div className={styles.logoText}>
-            <h1>TOP AGRO VET</h1>
-            <p>Sifatli mahsulotlar – ishonchli natija!</p>
-          </div>
-        </Link>
+        <div className={styles.container}>
+          <Link href="/" className={styles.logo}>
+            <LogoImage width={230} height={65} />
+          </Link>
 
-        <div className={`${styles.searchBar} ${showSearch ? styles.visible : ''}`}>
-          <input
-            type="text"
-            className={styles.searchInput}
-            placeholder="Mahsulot yoki kategoriya qidiring..."
-          />
-          <button className={styles.searchBtn}>
-            <Search size={18} />
+          <div className={styles.searchBar}>
+            <input
+              type="text"
+              className={styles.searchInput}
+              placeholder={t('header.search_placeholder')}
+              value={searchVal}
+              onChange={e => setSearchVal(e.target.value)}
+            />
+            <button className={styles.searchBtn} aria-label="Qidirish">
+              <Search size={15} />
+            </button>
+          </div>
+
+          <div className={styles.phoneBlock}>
+            <div className={styles.phoneIconWrap}>
+              <Phone size={19} />
+            </div>
+            <div>
+              <div className={styles.phoneNumber}>+998 90 123 45 67</div>
+              <div className={styles.phoneHours}>Har kuni 08:00 - 18:00</div>
+            </div>
+          </div>
+
+          <button className={styles.hamburger} onClick={() => setMobileOpen(true)} aria-label="Menyu">
+            <Menu size={22} />
           </button>
         </div>
-
-        <div className={styles.phoneBlock}>
-          <div className={styles.phoneIcon}>
-            <Phone size={18} />
-          </div>
-          <div>
-            <div className={styles.phoneNumber}>+998 90 123 45 67</div>
-            <div className={styles.phoneHours}>Har kuni 08:00 - 18:00</div>
-          </div>
-        </div>
-
-        <button className={styles.langSelector}>
-          <Globe size={14} />
-          UZ
-          <ChevronDown size={12} />
-        </button>
-
-        <button
-          className={styles.hamburger}
-          onClick={() => setMobileOpen(true)}
-          aria-label="Menyu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
 
       <nav className={styles.nav}>
-        <div className={styles.navInner}>
+        <div className={styles.container}>
+          <Link
+            href="/catalog"
+            className={`${styles.navLink} ${pathname.startsWith('/catalog') ? styles.active : ''}`}
+          >
+            {t('header.catalog')}
+            <ChevronDown size={13} className={styles.chevron} />
+          </Link>
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -91,41 +97,52 @@ export default function Header({ showSearch = false }) {
               className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
             >
               {item.label}
-              {item.hasDropdown && <ChevronDown size={14} />}
             </Link>
           ))}
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
-      <div className={`${styles.mobileNav} ${mobileOpen ? styles.open : ''}`}>
-        <button className={styles.mobileNavClose} onClick={() => setMobileOpen(false)}>
-          <X size={24} />
-        </button>
-        <Link href="/" className={styles.logo} style={{ marginBottom: '1rem' }}>
-          <div className={styles.logoIcon}>
-            <Leaf size={24} />
-          </div>
-          <div className={styles.logoText}>
-            <h1>TOP AGRO VET</h1>
-            <p>Sifatli mahsulotlar – ishonchli natija!</p>
-          </div>
-        </Link>
-        {navItems.map((item) => (
-          <Link key={item.label} href={item.href} className={styles.mobileNavLink}>
-            {item.label}
-          </Link>
-        ))}
-        <div style={{ marginTop: 'auto', padding: '1rem 0', borderTop: '1px solid #eee' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <Phone size={18} color="var(--color-primary)" />
-            <div>
-              <div style={{ fontWeight: 700 }}>+998 90 123 45 67</div>
-              <div style={{ fontSize: '12px', color: '#999' }}>Har kuni 08:00 - 18:00</div>
+      {mobileOpen && (
+        <div className={styles.mobileOverlay} onClick={() => setMobileOpen(false)}>
+          <div className={styles.mobilePanel} onClick={e => e.stopPropagation()}>
+            <div className={styles.mobilePanelHeader}>
+              <Link href="/" className={styles.logo}>
+                <LogoImage width={160} height={45} />
+              </Link>
+              <button onClick={() => setMobileOpen(false)} className={styles.mobileClose}>
+                <X size={20} />
+              </button>
+            </div>
+            <div className={styles.mobileSearch}>
+              <input type="text" placeholder={t('header.search_placeholder')} className={styles.searchInput} style={{width:'100%'}} />
+            </div>
+            <nav className={styles.mobileLinks}>
+              <Link
+                href="/catalog"
+                className={`${styles.mobileLink} ${pathname.startsWith('/catalog') ? styles.mobileLinkActive : ''}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {t('header.catalog')}
+              </Link>
+              {navItems.map(item => (
+                <Link key={item.label} href={item.href}
+                  className={`${styles.mobileLink} ${pathname === item.href ? styles.mobileLinkActive : ''}`}>
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <div className={styles.mobileFoot}>
+              <div className={styles.phoneBlock}>
+                <div className={styles.phoneIconWrap}><Phone size={17} /></div>
+                <div>
+                  <div className={styles.phoneNumber}>+998 90 123 45 67</div>
+                  <div className={styles.phoneHours}>Har kuni 08:00 - 18:00</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }

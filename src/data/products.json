@@ -147,7 +147,8 @@
       "Saqlash muddati": "3 yil"
     },
     "tabContent": {
-      "description": "AGRO GAUCHO 70% — sistemali ta'sirga ega insektisid bo'lib, soruv-chig va kemiruvchi hasharotlarga qarshi keng ta'sir oralig'i va uzoq muddat himoya qiladi.\n\n• Tez ta'sir qiladi va uzoq muddatli himoya ta'minlaydi\n• Yong'irga chidamli\n• Kam miqdorda qo'llaniladi, yuqori samaradorlikka ega\n• Ko'plab hasharotlarga qarshi ta'sirli",
+      "description": "AGRO GAUCHO 70% – sistemali ta'sirga ega insektitsid bo'lib, so'ruvchi va kemiruvchi hasharotlarga qarshi keng ta'sir doirasiga ega. O'simlik ildizlari orqali tez so'riladi va uzoq muddat himoya qiladi.\n\n• Tez ta'sir qiladi va uzoq muddat himoya ta'minlaydi\n• Yomg'irga chidamli\n• Kam miqdorda qo'llaniladi, yuqori samaradorlikka ega\n• Ko'plab hasharotlarga qarshi ta'sirli",
+      "crops": ["Paxta", "G'alla", "Meva daraxtlari", "Sabzavotlar", "Kartoshka", "Boshqalar"],
       "usage": "Urug'ni dorilaganda: 0.5-1.0 l/t urug'ga.\nPurkash usulida: 0.1-0.2 l/ga.\nIsh eritmasi sarfi: 200-300 l/ga."
     }
   },

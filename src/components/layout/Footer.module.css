@@ -14,21 +14,11 @@
 }
 
 .footerLogo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
 
-.footerLogoIcon {
-  width: 44px;
-  height: 44px;
-  background: var(--color-primary);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.footerLogo img {
+  display: block;
 }
 
 .footerLogoText h3 {

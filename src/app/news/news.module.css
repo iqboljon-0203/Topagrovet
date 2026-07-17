@@ -1,0 +1,122 @@
+.page {
+  min-height: 100vh;
+  padding: var(--space-16) 0;
+  background: var(--color-gray-50);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-500);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.newsCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+}
+
+.newsCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-200);
+}
+
+.imageWrap {
+  width: 100%;
+}
+
+.imagePlaceholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--color-gray-200);
+}
+
+.cardContent {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  margin-bottom: var(--space-3);
+}
+
+.newsTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-snug);
+}
+
+.newsExcerpt {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
+  flex: 1;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+  margin-top: auto;
+}
+
+.readMore:hover {
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .newsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}

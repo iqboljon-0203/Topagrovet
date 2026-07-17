@@ -1,0 +1,97 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.triggerBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.triggerBtn:hover, .triggerBtn.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.flagImg {
+  display: block;
+  border-radius: 2px;
+}
+
+.shortName {
+  letter-spacing: 0.5px;
+}
+
+.chevron {
+  transition: transform var(--transition-fast);
+}
+
+.triggerBtn.active .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  min-width: 140px;
+  z-index: var(--z-dropdown);
+  overflow: hidden;
+  border: 1px solid var(--color-gray-200);
+  animation: slideDown 0.2s ease forwards;
+  transform-origin: top right;
+}
+
+.optionBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  text-align: left;
+}
+
+.optionBtn:hover {
+  background: var(--color-gray-50);
+}
+
+.optionBtn.selected {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.name {
+  flex: 1;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

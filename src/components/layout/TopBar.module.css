@@ -1,11 +1,8 @@
 .topbar {
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-size: var(--font-size-xs);
+  background: #1B5E20;
   height: var(--topbar-height);
   display: flex;
   align-items: center;
-  overflow: hidden;
   position: relative;
   z-index: var(--z-header);
 }
@@ -18,65 +15,78 @@
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-padding);
+  gap: var(--space-6);
 }
 
-.marqueeWrap {
+.textWrap {
   flex: 1;
   overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  min-width: 0;
 }
 
-.marquee {
+.textContent {
   display: flex;
-  white-space: nowrap;
-  animation: marquee 30s linear infinite;
 }
 
-.marqueeText {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding-right: var(--space-12);
+.textItem {
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-}
-
-.marqueeText svg {
-  color: #FFD700;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .socialLinks {
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin-left: var(--space-6);
   flex-shrink: 0;
 }
 
 .socialLink {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
-  color: var(--color-white);
+  gap: 5px;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  opacity: 0.9;
-  transition: opacity var(--transition-fast);
+  color: rgba(255, 255, 255, 0.85);
+  transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .socialLink:hover {
-  opacity: 1;
+  color: white;
 }
 
-.socialLink svg {
-  width: 14px;
-  height: 14px;
+.divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: white;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.langBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
-  .socialLinks {
-    gap: var(--space-3);
-  }
   .socialLink span {
     display: none;
+  }
+  .socialLink {
+    gap: 0;
   }
 }
