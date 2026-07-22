@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { ChevronRight, Heart, ShoppingCart, Grid3X3, List, Bug, Leaf, Sprout, Droplets, FlaskConical, Pill, Shield, Heart as HeartIcon, Thermometer, SprayCan, Zap } from 'lucide-react';
+import { ChevronRight, Heart, ShoppingCart, Grid3X3, List, Bug, Leaf, Sprout, Droplets, FlaskConical, Pill, Shield, Heart as HeartIcon, Thermometer, SprayCan, Zap, Download } from 'lucide-react';
 import ScrollReveal from '@/components/3d/ScrollReveal';
 import ProductTilt from '@/components/3d/ProductTilt';
 import products from '@/data/products.json';
@@ -157,6 +157,18 @@ export default function CatalogPage() {
               <button className={styles.filterBtnReset} onClick={() => { setActiveSubcat('barchasi'); setPriceRange(1000000); }}>
                 Tozalash
               </button>
+            </div>
+          </div>
+
+          <div className={styles.sidebarSection}>
+            <h3 className={styles.sidebarTitle}>Kataloglar (PDF)</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <a href="/uz.pdf" target="_blank" rel="noopener noreferrer" className={styles.filterBtnApply} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textDecoration: 'none' }}>
+                <Download size={16} /> O'zbek tilida
+              </a>
+              <a href="/rus.pdf" target="_blank" rel="noopener noreferrer" className={styles.filterBtnReset} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textDecoration: 'none', color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}>
+                <Download size={16} /> Rus tilida
+              </a>
             </div>
           </div>
         </aside>

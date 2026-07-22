@@ -1,5 +1,7 @@
 export function formatPrice(price) {
-  return new Intl.NumberFormat('uz-UZ').format(price) + " so'm";
+  // Use en-US to guarantee consistent output across Node.js/Browser, 
+  // then replace commas with space for the localized look.
+  return new Intl.NumberFormat('en-US').format(price).replace(/,/g, ' ') + " so'm";
 }
 
 export function generateSlug(text) {

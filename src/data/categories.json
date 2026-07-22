@@ -4,11 +4,12 @@
     "name": "Veterinariya preparatlari",
     "description": "Hayvonlar salomatligi bizning g'amxo'rligimizda",
     "subcategories": [
-      { "id": "antibiotiklar", "name": "Antibiotiklar", "count": 52, "icon": "pill" },
-      { "id": "antiparazitar", "name": "Antiparazitar", "count": 38, "icon": "shield" },
-      { "id": "vitaminlar", "name": "Vitaminlar", "count": 45, "icon": "heart" },
-      { "id": "yalliglanishga-qarshi", "name": "Yallig'lanishga qarshi", "count": 22, "icon": "thermometer" },
-      { "id": "dezinfeksiya", "name": "Dezinfeksiya vositalari", "count": 31, "icon": "spray" },
+      { "id": "parazitlarga-qarshi", "name": "Паразидларга қарши воситалар", "count": 0, "icon": "shield" },
+      { "id": "antibakterial", "name": "Антибактериал ва яллиғланишга қарши воситалар", "count": 0, "icon": "pill" },
+      { "id": "akusherlik", "name": "Акушерлик-гинекологик воситалар", "count": 0, "icon": "heart" },
+      { "id": "vitamin-mineral", "name": "Витамин-минерал воситалар", "count": 0, "icon": "droplets" },
+      { "id": "boshqa-farm", "name": "Бошқа фарм-гурухлар ва дезинфекция воситалар", "count": 0, "icon": "spray" },
+      { "id": "koktsidiozga-qarshi", "name": "Кокцидиозга қарши воситалар", "count": 0, "icon": "thermometer" },
       { "id": "barchasi", "name": "Barchasi", "count": 188, "icon": "grid" }
     ]
   },
@@ -17,12 +18,11 @@
     "name": "Agro preparatlari",
     "description": "Mo'l hosil va yuqori sifat uchun eng yaxshi yechimlar",
     "subcategories": [
-      { "id": "insektisidlar", "name": "Insektisidlar", "count": 84, "icon": "bug" },
-      { "id": "fungisidlar", "name": "Fungisidlar", "count": 41, "icon": "leaf" },
-      { "id": "gerbisidlar", "name": "Gerbisidlar", "count": 33, "icon": "sprout" },
-      { "id": "urug-dorilagichlar", "name": "Urug' dorilagichlar", "count": 18, "icon": "droplets" },
-      { "id": "ogitlar", "name": "O'g'itlar", "count": 23, "icon": "flask" },
-      { "id": "stimulyatorlar", "name": "O'sish stimulyatorlari", "count": 15, "icon": "zap" },
+      { "id": "insektotsid", "name": "Инсектоцид", "count": 0, "icon": "bug" },
+      { "id": "insektoakaratsid", "name": "Инсектоакарацид", "count": 0, "icon": "shield" },
+      { "id": "fungitsid", "name": "Фунгицид", "count": 0, "icon": "leaf" },
+      { "id": "gerbitsid", "name": "Гербицид", "count": 0, "icon": "sprout" },
+      { "id": "mikroelementlar", "name": "Микроэлементлар", "count": 0, "icon": "flask" },
       { "id": "barchasi", "name": "Barchasi", "count": 189, "icon": "grid" }
     ]
   }

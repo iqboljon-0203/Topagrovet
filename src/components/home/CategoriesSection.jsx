@@ -5,20 +5,20 @@ import { ArrowRight, Pill, Shield, Heart, Thermometer, SprayCan, Grid3X3, Bug, L
 import styles from './CategoriesSection.module.css';
 
 const vetItems = [
-  { icon: Pill, label: 'Antibiotiklar' },
-  { icon: Shield, label: 'Antiparazitar' },
-  { icon: Heart, label: 'Vitaminlar' },
-  { icon: Thermometer, label: "Yallig'lanishga qarshi" },
-  { icon: SprayCan, label: 'Dezinfeksiya vositalari' },
-  { icon: Grid3X3, label: 'Barchasi' },
+  { icon: Shield, label: 'Паразидларга қарши воситалар' },
+  { icon: Pill, label: 'Антибактериал ва яллиғланишга қарши воситалар' },
+  { icon: Heart, label: 'Акушерлик-гинекологик воситалар' },
+  { icon: Droplets, label: 'Витамин-минерал воситалар' },
+  { icon: SprayCan, label: 'Бошқа фарм-гурухлар ва дезинфекция воситалар' },
+  { icon: Thermometer, label: 'Кокцидиозга қарши воситалар' },
 ];
 
 const agroItems = [
-  { icon: Bug, label: 'Insektisodlar' },
-  { icon: Leaf, label: 'Fungisidlar' },
-  { icon: Sprout, label: 'Gerbisidlar' },
-  { icon: Droplets, label: "Urug' dorilagichlar" },
-  { icon: FlaskConical, label: "O'g'itlar" },
+  { icon: Bug, label: 'Инсектоцид' },
+  { icon: Shield, label: 'Инсектоакарацид' },
+  { icon: Leaf, label: 'Фунгицид' },
+  { icon: Sprout, label: 'Гербицид' },
+  { icon: FlaskConical, label: 'Микроэлементлар' },
   { icon: Grid3X3, label: 'Barchasi' },
 ];
 

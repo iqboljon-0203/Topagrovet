@@ -1,535 +1,1434 @@
 [
   {
-    "id": 1,
-    "slug": "ms-oxytet-20-la",
-    "name": "MS-Oxytet 20% LA",
+    "id": 21,
+    "slug": "bromkolitrim",
+    "name": "BROMKOLITRIM",
     "category": "veterinariya",
-    "subcategory": "antibiotiklar",
+    "subcategory": "antibakterial",
     "categoryLabel": "Veterinariya",
-    "subcategoryLabel": "Antibiotiklar",
-    "activeIngredient": "Oksitetrasiklin 20%",
-    "description": "Oksitetrasiklin 20%\n100 ml, 250 ml, 500 ml",
-    "shortDesc": "Keng spektrli antibiotik, chorva mollari va parranda uchun",
-    "price": 185000,
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Antibakterial kompleks",
+    "description": "Antibiotik va balg'am ko'chiruvchi kompleks\n1 kg",
+    "shortDesc": "Nafas olish yo'llari va ichak kasalliklariga qarshi kukun",
+    "price": 180000,
     "oldPrice": null,
-    "volumes": ["100 ml", "250 ml", "500 ml"],
-    "selectedVolume": "100 ml",
+    "volumes": [
+      "1 kg"
+    ],
+    "selectedVolume": "1 kg",
     "inStock": true,
-    "rating": 4.7,
-    "reviewCount": 18,
-    "regNumber": "UZ-VET-2024-0156",
-    "manufacturer": "MS Pharma",
-    "country": "Iordaniya",
-    "preparatForm": "In'ektsiya eritmasi",
-    "classification": "Antibiotik (tetrasiklin)",
-    "shelfLife": "3 yil",
-    "images": ["/products/oxytet.svg"],
-    "specifications": {
-      "Faol moddasi": "Oksitetrasiklin 20%",
-      "Ishlab chiqaruvchi": "MS Pharma",
-      "Preparat shakli": "In'ektsiya eritmasi",
-      "Tasnifi": "Antibiotik",
-      "Qadoqlash": "100 ml, 250 ml, 500 ml",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "MS-Oxytet 20% LA — keng spektrli antibiotik preparat bo'lib, chorva mollari va parrandalarda bakterial infeksiyalarni davolashda qo'llaniladi. Uzoq muddatli ta'sir ko'rsatadi.",
-      "usage": "Mushak ichiga yuboriladi. Dozasi: har 1 kg tana vazniga 1 ml. 48-72 soat oralig'ida takrorlanadi."
-    }
-  },
-  {
-    "id": 2,
-    "slug": "ms-penstrep-400",
-    "name": "MS-Penstrep 400",
-    "category": "veterinariya",
-    "subcategory": "antibiotiklar",
-    "categoryLabel": "Veterinariya",
-    "subcategoryLabel": "Antibiotiklar",
-    "activeIngredient": "Penitsillin + Streptomisin",
-    "description": "Penitsillin + Streptomisin\n100 ml, 250 ml",
-    "shortDesc": "Ikki komponentli antibiotik, gram-musbat va gram-manfiy bakteriyalarga qarshi",
-    "price": 210000,
-    "oldPrice": null,
-    "volumes": ["100 ml", "250 ml"],
-    "selectedVolume": "100 ml",
-    "inStock": true,
-    "rating": 4.5,
-    "reviewCount": 12,
-    "regNumber": "UZ-VET-2024-0189",
-    "manufacturer": "MS Pharma",
-    "country": "Iordaniya",
-    "preparatForm": "In'ektsiya suspenziyasi",
-    "classification": "Antibiotik (kombinatsiyalangan)",
+    "rating": 4.6,
+    "reviewCount": 19,
+    "regNumber": "UZ-VET-2025-0107",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
     "shelfLife": "2 yil",
-    "images": ["/products/penstrep.svg"],
+    "images": [
+      "/products/uploads/media__1784718743188.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Penitsillin + Streptomisin",
-      "Ishlab chiqaruvchi": "MS Pharma",
-      "Preparat shakli": "In'ektsiya suspenziyasi",
-      "Tasnifi": "Antibiotik",
-      "Qadoqlash": "100 ml, 250 ml",
+      "Faol moddasi": "Antibakterial kompleks",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1 kg",
       "Saqlash muddati": "2 yil"
     },
     "tabContent": {
-      "description": "MS-Penstrep 400 — kombinatsiyalangan antibiotik preparat. Penitsillin va streptomisin birgalikda keng spektrli bakteritsid ta'sir ko'rsatadi.",
-      "usage": "Chuqur mushak ichiga yuboriladi. Dozasi: har 25 kg tana vazniga 1 ml."
+      "description": "Bromkolitrim nafas yo'llari va hazm qilish tizimi bakterial kasalliklariga qarshi kuchli vosita.",
+      "usage": "Suvga yoki ozuqaga aralashtirib beriladi."
     }
   },
   {
-    "id": 3,
-    "slug": "alpac-100-ec",
-    "name": "ALPAC 100 EC",
-    "category": "agro",
-    "subcategory": "insektisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Insektisidlar",
-    "activeIngredient": "Alfa-sipermetrin 100 g/l",
-    "description": "Alfa-sipermetrin 100 g/l\n1 L",
-    "shortDesc": "Kontakt-ichak insektisid, paxta, bug'doy va sabzavotlarda zararkunandalarga qarshi",
-    "price": 220000,
-    "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.3,
-    "reviewCount": 9,
-    "regNumber": "UZ-AGRO-2023-0478",
-    "manufacturer": "Agro Chemical Co.",
-    "country": "Xitoy",
-    "preparatForm": "Emulsiya kontsentrati (EC)",
-    "classification": "Insektisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/alpac.svg"],
-    "specifications": {
-      "Faol moddasi": "Alfa-sipermetrin 100 g/l",
-      "Ishlab chiqaruvchi": "Agro Chemical Co.",
-      "Preparat shakli": "Emulsiya kontsentrati (EC)",
-      "Tasnifi": "Insektisid",
-      "Qadoqlash": "1 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "ALPAC 100 EC — sintetik piretroid guruhiga mansub kontakt-ichak insektisid. Paxta, bug'doy, kartoshka va sabzavot ekinlarida zararkunandalarni yo'qotishda samarali.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 0.3-0.5 l/ga. Ish eritmasi sarfi: 200-400 l/ga."
-    }
-  },
-  {
-    "id": 4,
-    "slug": "agro-gaucho-70",
-    "name": "AGRO GAUCHO 70%",
-    "category": "agro",
-    "subcategory": "insektisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Insektisidlar",
-    "activeIngredient": "Imidakloprid 700 g/l",
-    "description": "Imidakloprid 700 g/l\n1 L",
-    "shortDesc": "Sistemali insektisid, urug'ni dorilaganda va o'simlikni himoya qilishda ishlatiladi",
-    "price": 550000,
-    "oldPrice": null,
-    "volumes": ["1 L", "5 L", "10 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.6,
-    "reviewCount": 24,
-    "regNumber": "UZ-AGRO-2023-0517",
-    "manufacturer": "Hebei Veyong Bio-Chemical Co., Ltd",
-    "country": "Xitoy",
-    "preparatForm": "Suspoziyalangan kontsentrat (SC)",
-    "classification": "Insektisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/gaucho.svg"],
-    "specifications": {
-      "Faol moddasi": "Imidakloprid 700 g/l",
-      "Ishlab chiqaruvchi": "Hebei Veyong Bio-Chemical Co., Ltd",
-      "Preparat shakli": "Suspoziyalangan kontsentrat (SC)",
-      "Tasnifi": "Insektisid",
-      "Qadoqlash": "1 L, 5 L, 10 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "AGRO GAUCHO 70% – sistemali ta'sirga ega insektitsid bo'lib, so'ruvchi va kemiruvchi hasharotlarga qarshi keng ta'sir doirasiga ega. O'simlik ildizlari orqali tez so'riladi va uzoq muddat himoya qiladi.\n\n• Tez ta'sir qiladi va uzoq muddat himoya ta'minlaydi\n• Yomg'irga chidamli\n• Kam miqdorda qo'llaniladi, yuqori samaradorlikka ega\n• Ko'plab hasharotlarga qarshi ta'sirli",
-      "crops": ["Paxta", "G'alla", "Meva daraxtlari", "Sabzavotlar", "Kartoshka", "Boshqalar"],
-      "usage": "Urug'ni dorilaganda: 0.5-1.0 l/t urug'ga.\nPurkash usulida: 0.1-0.2 l/ga.\nIsh eritmasi sarfi: 200-300 l/ga."
-    }
-  },
-  {
-    "id": 5,
-    "slug": "ms-alben-10",
-    "name": "MS-Alben 10%",
+    "id": 22,
+    "slug": "analgin-30",
+    "name": "ANALGIN 30%",
     "category": "veterinariya",
-    "subcategory": "antiparazitar",
+    "subcategory": "antibakterial",
     "categoryLabel": "Veterinariya",
-    "subcategoryLabel": "Antiparazitar",
-    "activeIngredient": "Albendazol 10%",
-    "description": "Albendazol 10%\n1 L",
-    "shortDesc": "Keng spektrli antigelmint preparat, ichki parazitlarga qarshi",
-    "price": 95000,
+    "subcategoryLabel": "Yallig'lanishga qarshi",
+    "activeIngredient": "Analgin 30%",
+    "description": "Og'riq qoldiruvchi va isitma tushiruvchi\n100 ml",
+    "shortDesc": "Chorva mollari uchun og'riq qoldiruvchi vosita",
+    "price": 45000,
     "oldPrice": null,
-    "volumes": ["1 L"],
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 21,
+    "regNumber": "UZ-VET-2025-0108",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Yallig'lanishga qarshi",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784718743218.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Analgin 30%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Og'riq qoldiruvchi",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Analgin 30% - hayvonlarda og'riqni qoldirish, isitmani tushirish va yallig'lanishni kamaytirish uchun samarali inyeksiya eritmasi.",
+      "usage": "Mushak orasiga yuboriladi."
+    }
+  },
+  {
+    "id": 23,
+    "slug": "vitabest-wsp",
+    "name": "VITABEST W.S.P",
+    "category": "veterinariya",
+    "subcategory": "vitamin-mineral",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Vitamin-mineral",
+    "activeIngredient": "Vitaminlar kompleksi",
+    "description": "Suvda eruvchan vitaminlar\n1000 g",
+    "shortDesc": "Chorva va parrandalar uchun universal vitamin kukun",
+    "price": 135000,
+    "oldPrice": null,
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 35,
+    "regNumber": "UZ-VET-2025-0109",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Vitamin",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784718743346.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Vitaminlar kompleksi",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Vitamin-mineral",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "VITABEST - yuqori darajada muvozanatlangan vitaminlar majmuasi. Hayvonlar o'sishini tezlashtiradi va tuxum hamda go'sht mahsuldorligini oshiradi.",
+      "usage": "Suvda eritib ichiriladi."
+    }
+  },
+  {
+    "id": 24,
+    "slug": "butofosfan-or",
+    "name": "Butofosfan OR",
+    "category": "veterinariya",
+    "subcategory": "vitamin-mineral",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Vitamin-mineral",
+    "activeIngredient": "Butafosfan + Sianokobalamin (B12)",
+    "description": "Moddalar almashinuvini yaxshilovchi vosita",
+    "shortDesc": "Quvvatni oshiruvchi va stressni kamaytiruvchi suyuq vitamin",
+    "price": 195000,
+    "oldPrice": null,
+    "volumes": [
+      "1 L"
+    ],
     "selectedVolume": "1 L",
     "inStock": true,
     "rating": 4.8,
-    "reviewCount": 31,
-    "regNumber": "UZ-VET-2024-0201",
-    "manufacturer": "MS Pharma",
-    "country": "Iordaniya",
-    "preparatForm": "Og'iz orqali suspenziya",
-    "classification": "Antiparazitar (antigelmint)",
-    "shelfLife": "3 yil",
-    "images": ["/products/alben.svg"],
-    "specifications": {
-      "Faol moddasi": "Albendazol 10%",
-      "Ishlab chiqaruvchi": "MS Pharma",
-      "Preparat shakli": "Og'iz orqali suspenziya",
-      "Tasnifi": "Antiparazitar",
-      "Qadoqlash": "1 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "MS-Alben 10% — keng spektrli antigelmint preparat. Chorva mollari, qo'y va echkilarda ichki parazitlarni yo'qotishda samarali.",
-      "usage": "Og'iz orqali. Dozasi: har 50 kg tana vazniga 5 ml. Yiliga 2-4 marta profilaktik davolash tavsiya etiladi."
-    }
-  },
-  {
-    "id": 6,
-    "slug": "knockdown-48-sl",
-    "name": "KNOCKDOWN 48 SL",
-    "category": "agro",
-    "subcategory": "gerbisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Gerbisidlar",
-    "activeIngredient": "Xlorpirifos 480 g/l",
-    "description": "Xlorpirifos 480 g/l\n1 L",
-    "shortDesc": "Kontakt gerbisid, ko'p yillik va bir yillik begona o'tlarga qarshi",
-    "price": 245000,
-    "oldPrice": null,
-    "volumes": ["1 L", "5 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.4,
-    "reviewCount": 15,
-    "regNumber": "UZ-AGRO-2023-0523",
-    "manufacturer": "Shandong Weifang",
+    "reviewCount": 27,
+    "regNumber": "UZ-VET-2025-0110",
+    "manufacturer": "Hebei Veyong",
     "country": "Xitoy",
-    "preparatForm": "Suvda eriydigan kontsentrat (SL)",
-    "classification": "Gerbisid",
+    "preparatForm": "Eritma",
+    "classification": "Vitamin-mineral",
     "shelfLife": "2 yil",
-    "images": ["/products/knockdown.svg"],
+    "images": [
+      "/products/uploads/media__1784718743496.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Xlorpirifos 480 g/l",
-      "Ishlab chiqaruvchi": "Shandong Weifang",
-      "Preparat shakli": "Suvda eriydigan kontsentrat (SL)",
-      "Tasnifi": "Gerbisid",
-      "Qadoqlash": "1 L, 5 L",
+      "Faol moddasi": "Butafosfan, B12 vitamini",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Eritma",
+      "Tasnifi": "Vitamin-mineral",
+      "Qadoqlash": "1 L",
       "Saqlash muddati": "2 yil"
     },
     "tabContent": {
-      "description": "KNOCKDOWN 48 SL — tanlamas ta'sirga ega gerbisid. Ko'p yillik va bir yillik begona o'tlarni samarali yo'qotadi.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 2-4 l/ga. Ish eritmasi sarfi: 200-300 l/ga."
+      "description": "Butofosfan OR hayvonlar va parrandalarda moddalar almashinuvini faollashtiradi, organizmni mustahkamlaydi va turli xil stresslarga chidamlilikni oshiradi.",
+      "usage": "Ichimlik suviga qo'shib beriladi."
     }
   },
   {
-    "id": 7,
-    "slug": "dufanon-48-emk",
-    "name": "DUFANON 48 EM.K.",
-    "category": "agro",
-    "subcategory": "insektisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Insektisidlar",
-    "activeIngredient": "Tebukonazol 60 g/l",
-    "description": "Tebukonazol 60 g/l\n1 L",
-    "shortDesc": "Kontakt-ichak insektisid, ko'p maqsadli himoya vositasi",
-    "price": 320000,
+    "id": 25,
+    "slug": "doxymulin-wsp-20",
+    "name": "Doxymulin WSP-20%",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Tiamulin Fumarate 10% + Doxycycline 10%",
+    "description": "Keng spektrli antibiotik\n1 kg",
+    "shortDesc": "Nafas yo'llari va ichak kasalliklariga qarshi kukun",
+    "price": 220000,
     "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
+    "volumes": [
+      "1 kg"
+    ],
+    "selectedVolume": "1 kg",
     "inStock": true,
-    "rating": 4.2,
-    "reviewCount": 8,
-    "regNumber": "UZ-AGRO-2023-0534",
-    "manufacturer": "Cheminova",
-    "country": "Daniya",
-    "preparatForm": "Emulsiya kontsentrati (EC)",
-    "classification": "Insektisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/dufanon.svg"],
+    "rating": 4.8,
+    "reviewCount": 14,
+    "regNumber": "UZ-VET-2025-0111",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719220664.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Tebukonazol 60 g/l",
-      "Ishlab chiqaruvchi": "Cheminova",
-      "Preparat shakli": "Emulsiya kontsentrati (EC)",
-      "Tasnifi": "Insektisid",
-      "Qadoqlash": "1 L",
+      "Faol moddasi": "Tiamulin 10%, Doksisiklin 10%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1 kg",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Doxymulin - ikki xil antibiotikning kuchli birikmasi bo'lib, mikoplazmoz va boshqa o'tkir bakterial kasalliklarni tezkor davolaydi.",
+      "usage": "Suvda eritib yoki ozuqaga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 26,
+    "slug": "dexafort-plus-100",
+    "name": "Dexafort Plus (Deksafort)",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Yallig'lanishga qarshi",
+    "activeIngredient": "Dexamethasone 4 mg",
+    "description": "Yallig'lanish va allergiyaga qarshi inyeksiya\n100 ml",
+    "shortDesc": "Kuchli yallig'lanishga qarshi va antiallergik vosita",
+    "price": 55000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 22,
+    "regNumber": "UZ-VET-2025-0112",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Yallig'lanishga qarshi",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719220852.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Dexamethasone 4 mg",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Yallig'lanishga qarshi",
+      "Qadoqlash": "100 ml",
       "Saqlash muddati": "3 yil"
     },
     "tabContent": {
-      "description": "DUFANON 48 EM.K. — kontakt-ichak ta'sirga ega insektisid preparat. Paxta, g'alla va sabzavot ekinlarida zararkunandalarga qarshi samarali.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 0.8-1.5 l/ga."
+      "description": "Dexafort Plus tez va uzoq muddat ta'sir qiluvchi kortikosteroid bo'lib, yallig'lanish, allergiya va stress holatlarini yo'qotadi.",
+      "usage": "Mushak orasiga inyeksiya qilinadi."
     }
   },
   {
-    "id": 8,
-    "slug": "talent-super",
-    "name": "TALENT SUPER",
-    "category": "agro",
-    "subcategory": "fungisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Fungisidlar",
-    "activeIngredient": "Trifloksistrobin metil 750 g/kg",
-    "description": "Trifloksistrobin metil 750 g/kg\n250 g",
-    "shortDesc": "Sistemali fungisid, zamburug' kasalliklariga qarshi",
-    "price": 680000,
+    "id": 27,
+    "slug": "ditroprim-powder",
+    "name": "Ditroprim Powder",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Sulfadimezin 100 mg + Trimethoprim 20 mg",
+    "description": "Keng spektrli antibakterial kukun\n500 g",
+    "shortDesc": "Chorva va parrandalar uchun kompleks antibiotik kukun",
+    "price": 110000,
     "oldPrice": null,
-    "volumes": ["250 g", "500 g"],
-    "selectedVolume": "250 g",
-    "inStock": true,
-    "rating": 4.5,
-    "reviewCount": 11,
-    "regNumber": "UZ-AGRO-2023-0545",
-    "manufacturer": "Bayer CropScience",
-    "country": "Germaniya",
-    "preparatForm": "Suvda eriydigan granula (WG)",
-    "classification": "Fungisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/talent.svg"],
-    "specifications": {
-      "Faol moddasi": "Trifloksistrobin metil 750 g/kg",
-      "Ishlab chiqaruvchi": "Bayer CropScience",
-      "Preparat shakli": "Suvda eriydigan granula (WG)",
-      "Tasnifi": "Fungisid",
-      "Qadoqlash": "250 g, 500 g",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "TALENT SUPER — sistemali fungisid preparat. Bug'doy, arpa va boshqa g'alla ekinlarida zamburug' kasalliklarini davolash va profilaktika uchun.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 0.5-0.8 kg/ga. Ish eritmasi sarfi: 200-400 l/ga."
-    }
-  },
-  {
-    "id": 9,
-    "slug": "altima-325-sc",
-    "name": "ALTIMA 325 SC",
-    "category": "agro",
-    "subcategory": "fungisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Fungisidlar",
-    "activeIngredient": "Azoksistribin 200 g/l + Difenokonazol 125 g/l",
-    "description": "Azoksistribin 200 g/l +\nDifenokonazol 125 g/l\n1 L",
-    "shortDesc": "Ikki komponentli sistemali fungisid, profilaktik va davolovchi ta'sir",
-    "price": 410000,
-    "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.7,
-    "reviewCount": 19,
-    "regNumber": "UZ-AGRO-2023-0556",
-    "manufacturer": "Syngenta",
-    "country": "Shveytsariya",
-    "preparatForm": "Suspoziyalangan kontsentrat (SC)",
-    "classification": "Fungisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/altima.svg"],
-    "specifications": {
-      "Faol moddasi": "Azoksistribin 200 g/l + Difenokonazol 125 g/l",
-      "Ishlab chiqaruvchi": "Syngenta",
-      "Preparat shakli": "Suspoziyalangan kontsentrat (SC)",
-      "Tasnifi": "Fungisid",
-      "Qadoqlash": "1 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "ALTIMA 325 SC — ikki faol moddali sistemali fungisid. Keng spektrli zamburug' kasalliklariga qarshi profilaktik va davolovchi ta'sir ko'rsatadi.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 0.5-0.75 l/ga."
-    }
-  },
-  {
-    "id": 10,
-    "slug": "glifos-480-sl",
-    "name": "GLIFOS 480 SL",
-    "category": "agro",
-    "subcategory": "gerbisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Gerbisidlar",
-    "activeIngredient": "Glyposate 480 g/l",
-    "description": "Glyposate 480 g/l\n1 L",
-    "shortDesc": "Universal tanlamas gerbisid, barcha turdagi begona o'tlarga qarshi",
-    "price": 218000,
-    "oldPrice": null,
-    "volumes": ["1 L", "5 L", "20 L"],
-    "selectedVolume": "1 L",
+    "volumes": [
+      "500 g"
+    ],
+    "selectedVolume": "500 g",
     "inStock": true,
     "rating": 4.6,
-    "reviewCount": 27,
-    "regNumber": "UZ-AGRO-2023-0567",
-    "manufacturer": "Zhejiang Chemicals",
+    "reviewCount": 18,
+    "regNumber": "UZ-VET-2025-0113",
+    "manufacturer": "Hebei Veyong",
     "country": "Xitoy",
-    "preparatForm": "Suvda eriydigan kontsentrat (SL)",
-    "classification": "Gerbisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/glifos.svg"],
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719220971.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Glyposate 480 g/l",
-      "Ishlab chiqaruvchi": "Zhejiang Chemicals",
-      "Preparat shakli": "Suvda eriydigan kontsentrat (SL)",
-      "Tasnifi": "Gerbisid",
-      "Qadoqlash": "1 L, 5 L, 20 L",
-      "Saqlash muddati": "3 yil"
+      "Faol moddasi": "Sulfadimezin, Trimetoprim",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "500 g",
+      "Saqlash muddati": "2 yil"
     },
     "tabContent": {
-      "description": "GLIFOS 480 SL — tanlamas bo'lmagan sistemali gerbisid. Barcha turdagi ko'p yillik va bir yillik begona o'tlarni samarali yo'qotadi.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 2-6 l/ga turdiga bog'liq. Ish eritmasi sarfi: 200-300 l/ga."
+      "description": "Ditroprim Powder oshqozon-ichak trakti, nafas olish yo'llari va siydik tizimi infeksiyalarini samarali davolovchi sinergik majmuadir.",
+      "usage": "Suvga yoki ozuqaga aralashtirib beriladi."
     }
   },
   {
-    "id": 11,
-    "slug": "ecofix-250-ec",
-    "name": "ECOFIX 250 EC",
-    "category": "agro",
-    "subcategory": "fungisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Fungisidlar",
-    "activeIngredient": "Propikonazol 250 g/l",
-    "description": "Propikonazol 250 g/l\n1 L",
-    "shortDesc": "Sistemali fungisid, don ekinlari uchun",
-    "price": 350000,
+    "id": 28,
+    "slug": "ditroprim-injection",
+    "name": "Ditroprim Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Sulfadimezin 200 mg + Trimethoprim 40 mg",
+    "description": "Keng spektrli antibakterial inyeksiya\n100 ml",
+    "shortDesc": "O'tkir infeksiyalarni tezkor davolovchi inyeksiya",
+    "price": 60000,
     "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
     "inStock": true,
-    "rating": 4.3,
-    "reviewCount": 14,
-    "regNumber": "UZ-AGRO-2023-0578",
-    "manufacturer": "FMC Corporation",
-    "country": "AQSh",
-    "preparatForm": "Emulsiya kontsentrati (EC)",
-    "classification": "Fungisid",
+    "rating": 4.7,
+    "reviewCount": 20,
+    "regNumber": "UZ-VET-2025-0114",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antibakterial",
     "shelfLife": "3 yil",
-    "images": ["/products/ecofix.svg"],
+    "images": [
+      "/products/uploads/media__1784719221228.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Propikonazol 250 g/l",
-      "Ishlab chiqaruvchi": "FMC Corporation",
-      "Preparat shakli": "Emulsiya kontsentrati (EC)",
-      "Tasnifi": "Fungisid",
-      "Qadoqlash": "1 L",
+      "Faol moddasi": "Sulfadimezin, Trimetoprim",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "100 ml",
       "Saqlash muddati": "3 yil"
     },
     "tabContent": {
-      "description": "ECOFIX 250 EC — sistemali fungisid, asosan bug'doy va arpa ekinlarida zang va boshqa zamburug' kasalliklariga qarshi ishlatiladi.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 0.5 l/ga."
+      "description": "Ditroprim Injection og'ir bakterial kasalliklar, shu jumladan zotiljam, diareya va mastitni tez va samarali davolaydi.",
+      "usage": "Mushak orasiga yuboriladi."
     }
   },
   {
-    "id": 12,
-    "slug": "megafol",
-    "name": "MEGAFOL",
-    "category": "agro",
-    "subcategory": "stimulyatorlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "O'sish stimulyatorlari",
-    "activeIngredient": "Aminokislotalar kompleksi",
-    "description": "Aminokislotalar kompleksi\n1 L",
-    "shortDesc": "Bio-stimulyator, o'simlik stressga chidamliligini oshiradi",
-    "price": 480000,
+    "id": 29,
+    "slug": "doxytyl-dt",
+    "name": "DOXYTYL-DT",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Doksisiklin + Tilosin",
+    "description": "Makrolid va tetrasiklin majmuasi\n1000 g",
+    "shortDesc": "Nafas yo'llari infeksiyalariga qarshi kuchli antibiotik",
+    "price": 280000,
     "oldPrice": null,
-    "volumes": ["1 L"],
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 31,
+    "regNumber": "UZ-VET-2025-0115",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719221245.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Doksisiklin, Tilosin",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "DOXYTYL-DT parrandalar va cho'chqalardagi mikoplazmoz, pasterellyoz va boshqa nafas olish tizimi kasalliklarini kompleks davolovchi doridir.",
+      "usage": "Ichimlik suviga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 30,
+    "slug": "iverantel-6-injection",
+    "name": "Iverantel-6% Injection",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Ivermectin 10 mg + Closantel 50 mg",
+    "description": "Keng qamrovli parazitlarga qarshi inyeksiya\n100 ml",
+    "shortDesc": "Tashqi va ichki parazitlarga qarshi kuchli vosita",
+    "price": 65000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 16,
+    "regNumber": "UZ-VET-2025-0116",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antiparazitar",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719436410.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Ivermektin, Klosantel",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Iverantel-6% — oshqozon-ichak va o'pka nematodalari, shuningdek bitlar, kanalar va boshqa tashqi parazitlarga qarshi yuqori samaradorlikka ega vosita.",
+      "usage": "Teri ostiga inyeksiya qilinadi."
+    }
+  },
+  {
+    "id": 31,
+    "slug": "ivermectin-vitamin-e",
+    "name": "Ivermectin + Vitamin E Inyeksiya",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Ivermectin + Vitamin E",
+    "description": "Antiparazitar va vitaminli kompleks\n100 ml",
+    "shortDesc": "Parazitlarni yo'qotuvchi va organizmni tiklovchi preparat",
+    "price": 58000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 24,
+    "regNumber": "UZ-VET-2025-0117",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antiparazitar",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719436503.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Ivermektin, E vitamini",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Ivermektin va Vitamin E kombinatsiyasi — parazitlarga qarshi ta'sir bilan birga, hayvonning immun tizimini ko'tarish va mushaklarni mustahkamlashga yordam beradi.",
+      "usage": "Teri ostiga yuboriladi."
+    }
+  },
+  {
+    "id": 32,
+    "slug": "iver-praz",
+    "name": "IVER-PRAZ",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Praziquantel + Ivermectin",
+    "description": "Og'iz orqali suspenziya\n1 L",
+    "shortDesc": "Gijja va nematodalarga qarshi oral suspenziya",
+    "price": 125000,
+    "oldPrice": null,
+    "volumes": [
+      "1 L"
+    ],
     "selectedVolume": "1 L",
     "inStock": true,
     "rating": 4.9,
-    "reviewCount": 32,
-    "regNumber": "UZ-AGRO-2024-0601",
-    "manufacturer": "Valagro",
-    "country": "Italiya",
-    "preparatForm": "Suyuq kontsentrat",
-    "classification": "Bio-stimulyator",
-    "shelfLife": "3 yil",
-    "images": ["/products/megafol.svg"],
-    "specifications": {
-      "Faol moddasi": "Aminokislotalar kompleksi",
-      "Ishlab chiqaruvchi": "Valagro",
-      "Preparat shakli": "Suyuq kontsentrat",
-      "Tasnifi": "Bio-stimulyator",
-      "Qadoqlash": "1 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "MEGAFOL — biologik stimulyator, o'simliklarda stress holatlariga (issiqlik, sovuq, quruqchilik) chidamlilikni oshiradi va hosildorlikni yaxshilaydi.",
-      "usage": "Barg orqali purkash. Sarflanish me'yori: 1.5-3.0 l/ga."
-    }
-  },
-  {
-    "id": 13,
-    "slug": "agro-nurell-55",
-    "name": "AGRO NURELL 55%",
-    "category": "agro",
-    "subcategory": "insektisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Insektisidlar",
-    "activeIngredient": "Xlorpirifos 500 g/l + Sipermetrin 50 g/l",
-    "description": "Xlorpirifos 500 g/l +\nSipermetrin 50 g/l\n1 L",
-    "shortDesc": "Kombinatsiyalangan insektisid, keng spektrli zararkunandalarga qarshi",
-    "price": 230000,
-    "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.4,
-    "reviewCount": 16,
-    "regNumber": "UZ-AGRO-2023-0612",
-    "manufacturer": "Dow AgroSciences",
-    "country": "AQSh",
-    "preparatForm": "Emulsiya kontsentrati (EC)",
-    "classification": "Insektisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/nurell.svg"],
-    "specifications": {
-      "Faol moddasi": "Xlorpirifos 500 g/l + Sipermetrin 50 g/l",
-      "Ishlab chiqaruvchi": "Dow AgroSciences",
-      "Preparat shakli": "Emulsiya kontsentrati (EC)",
-      "Tasnifi": "Insektisid",
-      "Qadoqlash": "1 L",
-      "Saqlash muddati": "3 yil"
-    },
-    "tabContent": {
-      "description": "AGRO NURELL 55% — ikki faol moddali keng spektrli insektisid. Paxta, don va sabzavot ekinlarida turli zararkunandalarga qarshi samarali.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 1.0-1.5 l/ga."
-    }
-  },
-  {
-    "id": 14,
-    "slug": "profenofos-500-ec",
-    "name": "PROFENOFOS 500 EC",
-    "category": "agro",
-    "subcategory": "insektisidlar",
-    "categoryLabel": "Agro",
-    "subcategoryLabel": "Insektisidlar",
-    "activeIngredient": "Profenofos 500 g/l",
-    "description": "Profenofos 500 g/l\n1 L",
-    "shortDesc": "Kontakt-ichak insektisid, paxta va sabzavotlar uchun",
-    "price": 200000,
-    "oldPrice": null,
-    "volumes": ["1 L"],
-    "selectedVolume": "1 L",
-    "inStock": true,
-    "rating": 4.1,
-    "reviewCount": 7,
-    "regNumber": "UZ-AGRO-2023-0623",
-    "manufacturer": "Shandong Jingbo",
+    "reviewCount": 33,
+    "regNumber": "UZ-VET-2025-0118",
+    "manufacturer": "Hebei Veyong",
     "country": "Xitoy",
-    "preparatForm": "Emulsiya kontsentrati (EC)",
-    "classification": "Insektisid",
-    "shelfLife": "3 yil",
-    "images": ["/products/profenofos.svg"],
+    "preparatForm": "Oral suspenziya",
+    "classification": "Antiparazitar",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719436539.png"
+    ],
     "specifications": {
-      "Faol moddasi": "Profenofos 500 g/l",
-      "Ishlab chiqaruvchi": "Shandong Jingbo",
-      "Preparat shakli": "Emulsiya kontsentrati (EC)",
-      "Tasnifi": "Insektisid",
+      "Faol moddasi": "Prazikvantel, Ivermektin",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suspenziya",
+      "Tasnifi": "Antiparazitar",
       "Qadoqlash": "1 L",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "IVER-PRAZ - tasmali, yassi va yumaloq gijjalarga qarshi juda samarali kombinatsiyalangan preparatdir. Barcha turdagi chorva mollari uchun to'g'ri keladi.",
+      "usage": "Og'iz orqali ichiriladi."
+    }
+  },
+  {
+    "id": 33,
+    "slug": "ivermectin-1-injection",
+    "name": "Ivermectin 1% Injection",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Ivermectin 10 mg/ml",
+    "description": "Antiparazitar inyeksiya\n100 ml",
+    "shortDesc": "Standart Ivermektin inyeksiyasi",
+    "price": 45000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.6,
+    "reviewCount": 40,
+    "regNumber": "UZ-VET-2025-0119",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antiparazitar",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719436826.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Ivermektin 10 mg/ml",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "100 ml",
       "Saqlash muddati": "3 yil"
     },
     "tabContent": {
-      "description": "PROFENOFOS 500 EC — fosfororganik insektisid. Paxta ekinida lichinalar va voyaga yetgan zararkunandalarga qarshi kuchli ta'sir ko'rsatadi.",
-      "usage": "Purkash usulida. Sarflanish me'yori: 1.0-2.0 l/ga."
+      "description": "Ivermectin 1% klassik va ishonchli preparat bo'lib, chorva mollaridagi turli xil tashqi va ichki parazitlarni oson yo'qotadi.",
+      "usage": "Teri ostiga qilinadi."
+    }
+  },
+  {
+    "id": 34,
+    "slug": "ivermectin-1-liter",
+    "name": "Ivermectin-1% (1 Litr)",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Ivermectin 10 mg",
+    "description": "Katta sig'imdagi antiparazitar suyuqlik\n1 L",
+    "shortDesc": "Katta xo'jaliklar uchun ivermektin eritmasi",
+    "price": 180000,
+    "oldPrice": null,
+    "volumes": [
+      "1 L"
+    ],
+    "selectedVolume": "1 L",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 28,
+    "regNumber": "UZ-VET-2025-0120",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Suyuqlik",
+    "classification": "Antiparazitar",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719436864.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Ivermektin 10 mg",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suyuqlik",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "1 L",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Ivermectin 1% ning litrlik qadog'i asosan parrandachilik va yirik chorvachilik fermalarida butun padaga berish uchun qulay formatdir.",
+      "usage": "Ko'rsatmalarga asosan suvga yoki ozuqaga qo'shiladi."
+    }
+  },
+  {
+    "id": 35,
+    "slug": "ichthyolum-99-8",
+    "name": "Ichthyolum 99.8%",
+    "category": "veterinariya",
+    "subcategory": "boshqa-farm",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Boshqa farm-guruhlar",
+    "activeIngredient": "Ixtiol 99.8%",
+    "description": "Antiseptik va yallig'lanishga qarshi\n500 g, 1 kg",
+    "shortDesc": "Tashqi qo'llash uchun antiseptik va yallig'lanishga qarshi vosita",
+    "price": 120000,
+    "oldPrice": null,
+    "volumes": [
+      "500 g",
+      "1 kg"
+    ],
+    "selectedVolume": "500 g",
+    "inStock": true,
+    "rating": 4.6,
+    "reviewCount": 18,
+    "regNumber": "UZ-VET-2025-0121",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Surtma",
+    "classification": "Antiseptik",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719689824.png",
+      "/products/uploads/media__1784719690514.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Ixtiol 99.8%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Surtma",
+      "Tasnifi": "Antiseptik, yallig'lanishga qarshi",
+      "Qadoqlash": "500 g, 1 kg",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Ixtiol 99.8% — teri kasalliklari, jarohatlar, kuyish va yallig'lanishlarni davolashda ishlatiladigan kuchli antiseptik vosita.",
+      "usage": "Sirtga, shikastlangan joyga surtiladi."
+    }
+  },
+  {
+    "id": 36,
+    "slug": "multivit-injection",
+    "name": "MULTIVIT INYEKSION",
+    "category": "veterinariya",
+    "subcategory": "vitamin-mineral",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Vitamin-mineral",
+    "activeIngredient": "Vitaminlar kompleksi",
+    "description": "Inyeksiya uchun vitaminlar kompleksi\n100 ml",
+    "shortDesc": "Tez ta'sir qiluvchi vitaminlar majmuasi",
+    "price": 55000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 42,
+    "regNumber": "UZ-VET-2025-0122",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Vitamin",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719689871.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Vitaminlar kompleksi",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Vitamin",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Multivit inyeksiyasi hayvonlarda gipovitaminozning oldini olish, kasallikdan keyingi tiklanish va mahsuldorlikni oshirish uchun ishlatiladi.",
+      "usage": "Mushak orasiga yuboriladi."
+    }
+  },
+  {
+    "id": 37,
+    "slug": "closantel-5-injection",
+    "name": "CLOSANTEL 5% INJECTION",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Klosantel 5%",
+    "description": "Antiparazitar inyeksiya\n100 ml",
+    "shortDesc": "Jigar qurtlari va boshqa parazitlarga qarshi samarali inyeksiya",
+    "price": 60000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 15,
+    "regNumber": "UZ-VET-2025-0123",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antiparazitar",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719690177.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Klosantel 5%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Closantel 5% asosan fassiolez, nematodalar va tashqi parazitlarni yo'qotish uchun qo'llaniluvchi kuchli vosita hisoblanadi.",
+      "usage": "Teri ostiga yoki mushak orasiga qilinadi."
+    }
+  },
+  {
+    "id": 38,
+    "slug": "multivit-v-minerals",
+    "name": "MULTIVIT V + MINERALS",
+    "category": "veterinariya",
+    "subcategory": "vitamin-mineral",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Vitamin-mineral",
+    "activeIngredient": "Vitamin va minerallar kompleksi",
+    "description": "Vitaminlar va mikroelementlar kompleksi\n100 ml",
+    "shortDesc": "O'sishni tezlashtiruvchi va immunitetni ko'taruvchi suyuq vitamin",
+    "price": 65000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 21,
+    "regNumber": "UZ-VET-2025-0124",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Eritma",
+    "classification": "Vitamin-mineral",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719690478.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "A, D3, E, B guruh vitaminlari va minerallar",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Eritma",
+      "Tasnifi": "Vitamin-mineral",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Multivit V + Minerals moddalar almashinuvini yaxshilash, stressni yengillashtirish va yosh hayvonlar o'sishini tezlashtirish uchun qo'llaniladi.",
+      "usage": "Ichimlik suviga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 39,
+    "slug": "oxyneovit-wsp",
+    "name": "OXYNEOVIT W.S.P",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oksitetrasiklin + Neomitsin + Vitaminlar",
+    "description": "Antibakterial va vitaminli kompleks kukun\n1000 g",
+    "shortDesc": "Oshqozon-ichak infeksiyalari va gipovitaminozni davolovchi vosita",
+    "price": 140000,
+    "oldPrice": null,
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 26,
+    "regNumber": "UZ-VET-2025-0125",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719807021.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin, Neomitsin, Vitaminlar",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial, Vitamin",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Oxyneovit — bakterial infeksiyalarga qarshi ta'sir bilan birga, kasallik paytida va undan keyin qushlar hamda hayvonlar organizmini kerakli vitaminlar bilan ta'minlaydi.",
+      "usage": "Ichimlik suviga yoki ozuqaga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 40,
+    "slug": "oxytetracycline-99-8",
+    "name": "Oxytetracycline 99.8%",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oksitetrasiklin 99.8%",
+    "description": "Keng spektrli antibiotik (Toza substansiya)\n1000 g",
+    "shortDesc": "Turli xil hayvonlar va parrandalar uchun kuchli antibiotik",
+    "price": 250000,
+    "oldPrice": null,
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 35,
+    "regNumber": "UZ-VET-2025-0126",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719807055.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin gidroxloridi 99.8%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Oksitetrasiklin 99.8% sof ko'rinishdagi antibiotik bo'lib, juda ko'p turdagi gram-musbat va gram-manfiy bakteriyalar chaqirgan kasalliklarda ishlatiladi.",
+      "usage": "Suvda eritiladi yoki ozuqaga qat'iy dozada aralashtiriladi."
+    }
+  },
+  {
+    "id": 41,
+    "slug": "oxyfuravita-wsp",
+    "name": "OXYFURAVITA W.S.P",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oksitetrasiklin + Furazolidon + Vitaminlar",
+    "description": "Kompleks antibakterial preparat\n1000 g",
+    "shortDesc": "Parranda va hayvonlarning o'tkir ichak kasalliklariga qarshi kukun",
+    "price": 160000,
+    "oldPrice": null,
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 22,
+    "regNumber": "UZ-VET-2025-0127",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719807160.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin, Furazolidon, Vitamin kompleksi",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Oxyfuravita salmonellyoz, kolibakterioz kabi og'ir bakterial infeksiyalarini samarali davolash bilan birga, tez tiklanishni ham ta'minlaydi.",
+      "usage": "Ichimlik suviga yoki ozuqaga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 42,
+    "slug": "long-acting-oxytetracycline-injection",
+    "name": "Long-Acting Oxytetracycline Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oxytetracycline 200 mg/ml",
+    "description": "Uzoq muddat ta'sir qiluvchi inyeksiya\n100 ml",
+    "shortDesc": "Uzoq vaqt samaradorlikni saqlovchi antibiotik",
+    "price": 55000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 30,
+    "regNumber": "UZ-VET-2025-0128",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719807182.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin 20%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Oksitetrasiklinning bu shakli (Long-Acting) qonda uzoq vaqt antibiotik konsentratsiyasini ushlab turadi va kasalliklarni bitta yoki ikkita doza bilan davolash imkonini beradi.",
+      "usage": "Chuqur mushak orasiga yuboriladi."
+    }
+  },
+  {
+    "id": 43,
+    "slug": "oxy-gen-spray-27",
+    "name": "OXY-GEN SPRAY-27",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oksitetrasiklin + Gensian binafshasi",
+    "description": "Antibakterial sprey\n100 ml",
+    "shortDesc": "Jarohat va teri kasalliklari uchun tashqi qo'llash spreyi",
+    "price": 35000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 45,
+    "regNumber": "UZ-VET-2025-0129",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Sprey",
+    "classification": "Antibakterial, Antiseptik",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719807337.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin 25mg, Gensian binafshasi 2mg",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Sprey",
+      "Tasnifi": "Antibakterial, Antiseptik",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Oxy-Gen Spray teri va tuyoqlardagi yuzaki jarohatlar, infeksiyalar va operatsiyadan keyingi tikilish joylarini mahalliy davolashda samarali antibiotik purkagichdir.",
+      "usage": "Shikastlangan sohaga purkaladi."
+    }
+  },
+  {
+    "id": 44,
+    "slug": "tylosin-5-injection",
+    "name": "Tylosin 5% Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Tilosin 5%",
+    "description": "Makrolid guruhiga kiruvchi antibiotik\n50 ml",
+    "shortDesc": "Mikoplazmoz va nafas yo'llari kasalliklari uchun inyeksiya",
+    "price": 30000,
+    "oldPrice": null,
+    "volumes": [
+      "50 ml"
+    ],
+    "selectedVolume": "50 ml",
+    "inStock": true,
+    "rating": 4.6,
+    "reviewCount": 15,
+    "regNumber": "UZ-VET-2025-0130",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719878325.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Tilosin tartrat 5%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "50 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Tylosin 5% gram-musbat bakteriyalar va mikoplazmalarga qarshi kuchli ta'sir qiluvchi makrolid antibiotikdir.",
+      "usage": "Mushak orasiga inyeksiya qilinadi."
+    }
+  },
+  {
+    "id": 45,
+    "slug": "oxyflunex-320",
+    "name": "OxyFlunex-320 Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Oksitetrasiklin 300 mg + Fluniksin meglumin 20 mg",
+    "description": "Kombinatsiyalangan antibakterial inyeksiya\n100 ml",
+    "shortDesc": "Og'riq qoldiruvchi va isitma tushiruvchi xususiyatga ega antibiotik",
+    "price": 75000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 25,
+    "regNumber": "UZ-VET-2025-0131",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antibakterial, yallig'lanishga qarshi",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719878422.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Oksitetrasiklin, Fluniksin meglumin",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antibakterial, NSAID",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "OxyFlunex-320 bakterial infeksiyalarni davolash bilan birga kasallik vaqtidagi kuchli og'riq, isitma va yallig'lanishni bir zumda tushiradi.",
+      "usage": "Chuqur mushak orasiga yuboriladi."
+    }
+  },
+  {
+    "id": 46,
+    "slug": "penstrep-v-injection",
+    "name": "Penstrep V Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Prokain penitsillin 20 mg + Digidrostreptomisin 25 mg",
+    "description": "Keng spektrli suspenziya inyeksiya\n100 ml",
+    "shortDesc": "Pnevmoniya va oshqozon-ichak infeksiyalarini samarali davolash",
+    "price": 45000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 42,
+    "regNumber": "UZ-VET-2025-0132",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun suspenziya",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719878802.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Penitsillin, Streptomitsin",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suspenziya inyeksiya",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Penstrep V — penitsillin va streptomitsin sinergizmi hisobiga bakteriyalarni samarali nobud qiluvchi tayyor inyeksiya eritmasidir.",
+      "usage": "Yaxshilab chayqatib, mushak orasiga qilinadi."
+    }
+  },
+  {
+    "id": 47,
+    "slug": "tylosin-20-injection",
+    "name": "Tylosin 20% Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Tilosin 20%",
+    "description": "Kuchaytirilgan makrolid inyeksiya\n50 ml",
+    "shortDesc": "Yuqori konsentratsiyali Tilosin eritmasi",
+    "price": 55000,
+    "oldPrice": null,
+    "volumes": [
+      "50 ml"
+    ],
+    "selectedVolume": "50 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 21,
+    "regNumber": "UZ-VET-2025-0133",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719878936.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Tilosin 20%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "50 ml",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Tylosin 20% asosan yirik va mayda shoxli hayvonlar hamda cho'chqalardagi og'ir pnevmoniya, dizenteriya va artritni davolash uchun qo'llaniladi.",
+      "usage": "Mushak orasiga yuboriladi."
+    }
+  },
+  {
+    "id": 48,
+    "slug": "rybiy-jir-vitamin",
+    "name": "Vitaminlashtirilgan Baliq Yog'i",
+    "category": "veterinariya",
+    "subcategory": "vitamin-mineral",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Vitamin-mineral",
+    "activeIngredient": "Baliq yog'i + Vitaminlar",
+    "description": "Oleum Jecoris Vitaminisatus\n1 L",
+    "shortDesc": "A, D va E vitaminlariga boy ozuqaviy qo'shimcha",
+    "price": 90000,
+    "oldPrice": null,
+    "volumes": [
+      "1 L"
+    ],
+    "selectedVolume": "1 L",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 38,
+    "regNumber": "UZ-VET-2025-0134",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Suyuqlik",
+    "classification": "Ozuqaviy qo'shimcha",
+    "shelfLife": "1 yil",
+    "images": [
+      "/products/uploads/media__1784719878959.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Baliq yog'i, A, D, E vitaminlar",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suyuqlik",
+      "Tasnifi": "Ozuqaviy qo'shimcha",
+      "Qadoqlash": "1 L",
+      "Saqlash muddati": "1 yil"
+    },
+    "tabContent": {
+      "description": "Vitaminlashtirilgan baliq yog'i raxit va osteomalyatsiyaning oldini olish, teri va jun qoplamini yaxshilash hamda o'sishni jadallashtirish uchun eng tabiiy vositadir.",
+      "usage": "Asosiy ozuqaga aralashtirib beriladi."
+    }
+  },
+  {
+    "id": 49,
+    "slug": "eprimec-injection",
+    "name": "Eprimec Injection",
+    "category": "veterinariya",
+    "subcategory": "parazitlarga-qarshi",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antiparazitar",
+    "activeIngredient": "Eprinomektin 10 mg",
+    "description": "Keng ko'lamli antiparazitar vosita\n100 ml",
+    "shortDesc": "Sog'in sigirlar uchun xavfsiz parazitlarga qarshi inyeksiya",
+    "price": 85000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 27,
+    "regNumber": "UZ-VET-2025-0135",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Antiparazitar",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719955217.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Eprinomektin 1%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Antiparazitar",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Eprimec ichki va tashqi parazitlarni qirib tashlashda qo'llaniladi. Sut bilan chiqib ketmasligi sababli sog'in sigirlar uchun juda qulay.",
+      "usage": "Teri ostiga yuboriladi."
+    }
+  },
+  {
+    "id": 50,
+    "slug": "flunexin-5-injection",
+    "name": "Flunexin-5% Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Yallig'lanishga qarshi",
+    "activeIngredient": "Fluniksin meglumin 50 mg",
+    "description": "Nosteroid yallig'lanishga qarshi vosita\n100 ml",
+    "shortDesc": "Kuchli og'riq qoldiruvchi va isitma tushiruvchi preparat",
+    "price": 60000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 33,
+    "regNumber": "UZ-VET-2025-0136",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Yallig'lanishga qarshi, NSAID",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719955331.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Fluniksin meglumin 5%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Yallig'lanishga qarshi",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Flunexin-5% yuqumli va yallig'lanish kasalliklari fonida kelib chiqadigan og'riq, isitma, mastit, pnevmoniya belgilarini zudlik bilan yo'q qiladi.",
+      "usage": "Vena ichiga yoki mushak orasiga qilinadi."
+    }
+  },
+  {
+    "id": 51,
+    "slug": "ceftiofur-injection",
+    "name": "Ceftiofur Injection",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Seftiofur gidroxloridi",
+    "description": "Uchinchi avlod sefalosporin antibiotiki\n100 ml",
+    "shortDesc": "Sutga o'tmaydigan kuchli antibiotik",
+    "price": 85000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 18,
+    "regNumber": "UZ-VET-2025-0137",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun suspenziya",
+    "classification": "Antibakterial",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784719955567.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Seftiofur",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suspenziya inyeksiya",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "100 ml",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Ceftiofur asosan nafas olish tizimi kasalliklari (pnevmoniya), tuyoq chirishi va mastitni davolashda ishlatiladi. Sog'in sigirlar suti orqali ajralmaydi.",
+      "usage": "Yaxshilab chayqatilib, mushak orasiga yoki teri ostiga qilinadi."
+    }
+  },
+  {
+    "id": 52,
+    "slug": "tylosin-99-8",
+    "name": "Tylosin 99.8%",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Tilosin tartrat 99.8%",
+    "description": "Keng spektrli makrolid antibiotik\n1000 g",
+    "shortDesc": "Parranda va cho'chqalardagi mikoplazmoz uchun samarali antibiotik",
+    "price": 320000,
+    "oldPrice": null,
+    "volumes": [
+      "1000 g"
+    ],
+    "selectedVolume": "1000 g",
+    "inStock": true,
+    "rating": 4.9,
+    "reviewCount": 40,
+    "regNumber": "UZ-VET-2025-0138",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Kukun",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784719955585.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Tilosin tartrat 99.8%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Kukun",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "1000 g",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Tilosin 99.8% kukun shaklida bo'lib, nafas yo'llari infeksiyalari va mikoplazmozga qarshi eng ishonchli ta'sirga ega sof antibiotik hisoblanadi.",
+      "usage": "Ichimlik suviga qo'shiladi."
+    }
+  },
+  {
+    "id": 53,
+    "slug": "enroflox-10-liquid",
+    "name": "Enroflox 10%",
+    "category": "veterinariya",
+    "subcategory": "antibakterial",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Antibakterial",
+    "activeIngredient": "Enrofloksatsin 10%",
+    "description": "Ftorxinolonlar guruhiga kiruvchi antibiotik\n100 ml, 1 L",
+    "shortDesc": "Parranda va hayvonlarda bakterial kasalliklarni davolovchi suyuq dori",
+    "price": 120000,
+    "oldPrice": null,
+    "volumes": [
+      "100 ml",
+      "1 L"
+    ],
+    "selectedVolume": "100 ml",
+    "inStock": true,
+    "rating": 4.7,
+    "reviewCount": 29,
+    "regNumber": "UZ-VET-2025-0139",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Suyuqlik",
+    "classification": "Antibakterial",
+    "shelfLife": "3 yil",
+    "images": [
+      "/products/uploads/media__1784720022566.png",
+      "/products/uploads/media__1784719955645.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Enrofloksatsin 10%",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Suyuqlik",
+      "Tasnifi": "Antibakterial",
+      "Qadoqlash": "100 ml, 1 L",
+      "Saqlash muddati": "3 yil"
+    },
+    "tabContent": {
+      "description": "Enroflox 10% salmonellyoz, kolibakterioz, pasterellyoz va boshqa keng tarqalgan infeksion kasalliklarni tezkorlik bilan davolashda samarali vosita hisoblanadi.",
+      "usage": "Ichimlik suviga qo'shib beriladi."
+    }
+  },
+  {
+    "id": 54,
+    "slug": "estradiol-benzoate-injection",
+    "name": "Estradiol Benzoate Injection",
+    "category": "veterinariya",
+    "subcategory": "akusherlik",
+    "categoryLabel": "Veterinariya",
+    "subcategoryLabel": "Akusherlik va ginekologik vositalar",
+    "activeIngredient": "Estradiol benzoat",
+    "description": "Gormonal inyeksiya\n10 ta ampula x 5 ml",
+    "shortDesc": "Hayvonlar reproduktiv funksiyalarini tartibga soluvchi vosita",
+    "price": 45000,
+    "oldPrice": null,
+    "volumes": [
+      "10 x 5 ml"
+    ],
+    "selectedVolume": "10 x 5 ml",
+    "inStock": true,
+    "rating": 4.8,
+    "reviewCount": 12,
+    "regNumber": "UZ-VET-2025-0140",
+    "manufacturer": "Hebei Veyong",
+    "country": "Xitoy",
+    "preparatForm": "Inyeksiya uchun eritma",
+    "classification": "Gormonal",
+    "shelfLife": "2 yil",
+    "images": [
+      "/products/uploads/media__1784720022624.png"
+    ],
+    "specifications": {
+      "Faol moddasi": "Estradiol benzoat",
+      "Ishlab chiqaruvchi": "Hebei Veyong",
+      "Preparat shakli": "Inyeksiya uchun eritma",
+      "Tasnifi": "Akusherlik-ginekologik, gormonal",
+      "Qadoqlash": "1 qutida 10 ta ampula (5 ml dan)",
+      "Saqlash muddati": "2 yil"
+    },
+    "tabContent": {
+      "description": "Estradiol benzoat hayvonlarda jinsiy ishtiyoqni qo'zg'atish, bachadondan yiring va qoldiqlarni tozalash hamda ko'payish xususiyatlarini yaxshilash maqsadida qo'llaniluvchi estrogen gormonidir.",
+      "usage": "Teri ostiga yoki mushak orasiga yuboriladi."
     }
   }
 ]
