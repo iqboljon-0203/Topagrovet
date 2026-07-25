@@ -3,8 +3,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Preparing for Cloudflare Pages
-  output: 'export',
+  // Cloudflare Pages full-stack (Next-on-Pages) orqali ishlaydi, 'export' shart emas.
 };
 
 export default nextConfig;

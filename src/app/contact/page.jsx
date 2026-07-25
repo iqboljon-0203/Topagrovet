@@ -1,35 +1,107 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { supabase } from '@/lib/supabaseClient';
 import styles from './contact.module.css';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-
-export const metadata = {
-  title: 'Aloqa | Top Agro Vet',
-  description: 'Top Agro Vet bilan bog`lanish uchun aloqa ma`lumotlari.',
-};
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Loader2 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function ContactPage() {
+  const { language, t } = useLanguage();
+  const isRu = language === 'ru';
+  const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
+
+  const [contactInfo, setContactInfo] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    async function fetchContactInfo() {
+      const { data, error } = await supabase
+        .from('contact_info')
+        .select('*')
+        .limit(1)
+        .single();
+
+      if (!error && data) {
+        setContactInfo(data);
+      }
+      setLoading(false);
+    }
+    fetchContactInfo();
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setError('');
+
+    const { error } = await supabase
+      .from('contact_messages')
+      .insert([{
+        name: formData.name,
+        phone: formData.phone,
+        message: formData.message,
+      }]);
+
+    if (error) {
+      setError('Xabar yuborishda xatolik yuz berdi. Qayta urinib ko\'ring.');
+    } else {
+      setSent(true);
+      setFormData({ name: '', phone: '', message: '' });
+      setTimeout(() => setSent(false), 4000);
+    }
+    setSending(false);
+  };
+
+  if (loading) {
+    return (
+      <div className={styles.page}>
+        <div className={styles.loadingState}>
+          <div className={styles.loadingSpinner} />
+          <span>{isRu ? 'Загрузка...' : 'Yuklanmoqda...'}</span>
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback qiymatlar agar bazadan olinmasa
+  const info = contactInfo || {
+    phone1: '+998 90 123 45 67',
+    phone2: '+998 71 123 45 67',
+    email1: 'info@topagrovet.uz',
+    email2: 'support@topagrovet.uz',
+    address_line1: 'Toshkent shahri, Chilonzor tumani,',
+    address_line2: 'Bunyodkor shoh ko\'chasi, 42-uy',
+    work_hours: 'Dushanba - Shanba: 08:00 - 18:00',
+    day_off: 'Yakshanba: Dam olish kuni',
+    map_embed_url: '',
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Biz bilan bog'lanish</h1>
+          <h1 className={styles.title}>{t('contactPage.title')}</h1>
           <p className={styles.subtitle}>
-            Savollaringiz bormi? Mutaxassislarimiz sizga yordam berishdan mamnun bo'lishadi.
+            {t('contactPage.subtitle')}
           </p>
         </div>
 
         <div className={styles.grid}>
           {/* Contact Information */}
           <div className={styles.infoSection}>
-            
             <div className={styles.infoCards}>
               <div className={styles.infoCard}>
                 <div className={styles.iconWrap}>
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3>Telefon</h3>
-                  <p>+998 90 123 45 67</p>
-                  <p>+998 71 123 45 67</p>
+                  <h3>{t('contactPage.phone')}</h3>
+                  <p>{info.phone1}</p>
+                  {info.phone2 && <p>{info.phone2}</p>}
                 </div>
               </div>
 
@@ -38,9 +110,9 @@ export default function ContactPage() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3>Elektron pochta</h3>
-                  <p>info@topagrovet.uz</p>
-                  <p>support@topagrovet.uz</p>
+                  <h3>{t('contactPage.email')}</h3>
+                  <p>{info.email1}</p>
+                  {info.email2 && <p>{info.email2}</p>}
                 </div>
               </div>
 
@@ -49,9 +121,9 @@ export default function ContactPage() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3>Manzil</h3>
-                  <p>Toshkent shahri, Chilonzor tumani,</p>
-                  <p>Bunyodkor shoh ko'chasi, 42-uy</p>
+                  <h3>{t('contactPage.address')}</h3>
+                  <p>{val(info.address_line1, info.address_line1_ru)}</p>
+                  {val(info.address_line2, info.address_line2_ru) && <p>{val(info.address_line2, info.address_line2_ru)}</p>}
                 </div>
               </div>
 
@@ -60,9 +132,9 @@ export default function ContactPage() {
                   <Clock size={24} />
                 </div>
                 <div>
-                  <h3>Ish vaqti</h3>
-                  <p>Dushanba - Shanba: 08:00 - 18:00</p>
-                  <p>Yakshanba: Dam olish kuni</p>
+                  <h3>{t('contactPage.work_hours')}</h3>
+                  <p>{val(info.work_hours, info.work_hours_ru)}</p>
+                  {val(info.day_off, info.day_off_ru) && <p>{val(info.day_off, info.day_off_ru)}</p>}
                 </div>
               </div>
             </div>
@@ -70,39 +142,86 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className={styles.formSection}>
-            <h2 className={styles.sectionTitle}>Xabar yuborish</h2>
-            <form className={styles.form}>
+            <h2 className={styles.sectionTitle}>{t('contactPage.form_title')}</h2>
+
+            {sent && (
+              <div className={styles.successMessage}>
+                <CheckCircle size={18} />
+                {t('contactPage.success')}
+              </div>
+            )}
+
+            {error && (
+              <div className={styles.errorMessage}>
+                {t('contactPage.error')}
+              </div>
+            )}
+
+            <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
-                <label htmlFor="name">Ismingiz</label>
-                <input type="text" id="name" placeholder="Ism va familiyangiz" required />
+                <label htmlFor="name">{t('contactPage.name_label')}</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder={t('contactPage.name_placeholder')}
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="phone">Telefon raqamingiz</label>
-                <input type="tel" id="phone" placeholder="+998" required />
+                <label htmlFor="phone">{t('contactPage.phone_label')}</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="+998"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="message">Xabaringiz</label>
-                <textarea id="message" rows="5" placeholder="Qanday yordam bera olamiz?" required></textarea>
+                <label htmlFor="message">{t('contactPage.message_label')}</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder={t('contactPage.message_placeholder')}
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                ></textarea>
               </div>
-              <button type="submit" className={styles.submitBtn}>
-                Xabarni yuborish
+              <button type="submit" className={styles.submitBtn} disabled={sending}>
+                {sending ? (
+                  <>
+                    <Loader2 size={18} className={styles.spinIcon} />
+                    {t('contactPage.submitting')}
+                  </>
+                ) : (
+                  <>
+                    <Send size={18} />
+                    {t('contactPage.submit')}
+                  </>
+                )}
               </button>
             </form>
           </div>
         </div>
 
         {/* Map Section */}
-        <div className={styles.mapSection}>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.073069253112!2d69.2043005!3d41.2855141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sBunyodkor%20Shoh%20Ko&#39;chasi%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        {info.map_embed_url && (
+          <div className={styles.mapSection}>
+            <iframe
+              src={info.map_embed_url}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        )}
       </div>
     </div>
   );

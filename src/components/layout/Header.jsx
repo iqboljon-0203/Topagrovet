@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Phone, Search, ChevronDown, X, Menu } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { supabase } from '@/lib/supabaseClient';
 import styles from './Header.module.css';
 
 function LogoImage({ width = 260, height = 75 }) {
@@ -26,8 +27,11 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchVal, setSearchVal] = useState('');
+  const [contactInfo, setContactInfo] = useState(null);
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const isRu = language === 'ru';
+  const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
 
   const navItems = [
     { label: t('header.home'), href: '/' },
@@ -39,6 +43,13 @@ export default function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
     window.addEventListener('scroll', onScroll);
+    
+    async function fetchContact() {
+      const { data } = await supabase.from('contact_info').select('phone1, work_hours, work_hours_ru').limit(1).single();
+      if (data) setContactInfo(data);
+    }
+    fetchContact();
+
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -70,8 +81,8 @@ export default function Header() {
               <Phone size={19} />
             </div>
             <div>
-              <div className={styles.phoneNumber}>+998 90 123 45 67</div>
-              <div className={styles.phoneHours}>Har kuni 08:00 - 18:00</div>
+              <div className={styles.phoneNumber}>{contactInfo?.phone1 || '+998 90 123 45 67'}</div>
+              <div className={styles.phoneHours}>{val(contactInfo?.work_hours, contactInfo?.work_hours_ru) || (isRu ? 'Ежедневно 08:00 - 18:00' : 'Har kuni 08:00 - 18:00')}</div>
             </div>
           </div>
 
@@ -135,8 +146,8 @@ export default function Header() {
               <div className={styles.phoneBlock}>
                 <div className={styles.phoneIconWrap}><Phone size={17} /></div>
                 <div>
-                  <div className={styles.phoneNumber}>+998 90 123 45 67</div>
-                  <div className={styles.phoneHours}>Har kuni 08:00 - 18:00</div>
+                  <div className={styles.phoneNumber}>{contactInfo?.phone1 || '+998 90 123 45 67'}</div>
+                  <div className={styles.phoneHours}>{val(contactInfo?.work_hours, contactInfo?.work_hours_ru) || (isRu ? 'Ежедневно 08:00 - 18:00' : 'Har kuni 08:00 - 18:00')}</div>
                 </div>
               </div>
             </div>

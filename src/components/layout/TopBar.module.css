@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  z-index: var(--z-header);
+  z-index: 999;
 }
 
 .topbarInner {

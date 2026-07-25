@@ -1,15 +1,36 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ChevronLeft, ChevronRight, Heart, ShoppingCart } from 'lucide-react';
-import products from '@/data/products.json';
+import { supabase } from '@/lib/supabaseClient';
 import { getCategoryBadgeClass } from '@/lib/utils';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './PopularProducts.module.css';
 
 export default function PopularProducts() {
+  const { language, t } = useLanguage();
   const scrollRef = useRef(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPopular() {
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .eq('is_popular', true)
+        .order('rating', { ascending: false })
+        .limit(10);
+        
+      if (data && !error) {
+        setProducts(data);
+      }
+      setLoading(false);
+    }
+    fetchPopular();
+  }, []);
 
   const scroll = (dir) => {
     if (scrollRef.current) {
@@ -17,13 +38,15 @@ export default function PopularProducts() {
     }
   };
 
+  if (loading) return null;
+
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h2 className={styles.title}>Mashhur mahsulotlar</h2>
+        <h2 className={styles.title}>{t('home.popular_title')}</h2>
         <div className={styles.headerRight}>
           <Link href="/catalog/barchasi" className={styles.viewAll}>
-            Barchasini ko'rish
+            {t('home.view_all')}
           </Link>
           <div className={styles.arrows}>
             <button className={styles.arrowBtn} onClick={() => scroll('left')} aria-label="Oldingi">
@@ -59,11 +82,11 @@ export default function PopularProducts() {
 
               {/* Info area */}
               <div className={styles.info}>
-                <div className={styles.productName}>{product.name}</div>
-                <div className={styles.productDesc}>{product.description}</div>
+                <div className={styles.productName}>{language === 'ru' && product.name_ru ? product.name_ru : product.name}</div>
+                <div className={styles.productDesc}>{language === 'ru' && product.description_ru ? product.description_ru : product.description}</div>
                 <div className={styles.footer}>
                   <Link href={`/product/${product.slug}`} className={styles.detailLink}>
-                    Batafsil <ArrowRight size={13} />
+                    {language === 'ru' ? 'Подробнее' : 'Batafsil'} <ArrowRight size={13} />
                   </Link>
                   <button className={styles.cartBtn} aria-label="Savatga">
                     <ShoppingCart size={16} />

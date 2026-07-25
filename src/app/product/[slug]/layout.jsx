@@ -1,9 +1,10 @@
-import products from '@/data/products.json';
+import { supabase } from '@/lib/supabaseClient';
 
-export function generateStaticParams() {
-  return products.map((product) => ({
+export async function generateStaticParams() {
+  const { data } = await supabase.from('products').select('slug');
+  return data?.map((product) => ({
     slug: product.slug,
-  }));
+  })) || [];
 }
 
 export default function Layout({ children }) {

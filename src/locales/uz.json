@@ -45,5 +45,23 @@
     "description": "Tavsif",
     "specifications": "Xususiyatlar",
     "similar_products": "O'xshash Mahsulotlar"
+  },
+  "contactPage": {
+    "title": "Biz bilan bog'lanish",
+    "subtitle": "Savollaringiz bormi? Mutaxassislarimiz sizga yordam berishdan mamnun bo'lishadi.",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "address": "Manzil",
+    "work_hours": "Ish vaqti",
+    "form_title": "Xabar yuborish",
+    "name_label": "Ismingiz",
+    "name_placeholder": "Ism va familiyangiz",
+    "phone_label": "Telefon raqamingiz",
+    "message_label": "Xabaringiz",
+    "message_placeholder": "Qanday yordam bera olamiz?",
+    "submit": "Xabarni yuborish",
+    "submitting": "Yuborilmoqda...",
+    "success": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "error": "Xabar yuborishda xatolik yuz berdi. Qayta urinib ko'ring."
   }
 }

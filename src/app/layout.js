@@ -1,7 +1,5 @@
 import '@/styles/globals.css';
-import TopBar from '@/components/layout/TopBar';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import LayoutShell from '@/components/layout/LayoutShell';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata = {
@@ -21,10 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="uz">
       <body>
         <LanguageProvider>
-          <TopBar />
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <LayoutShell>{children}</LayoutShell>
         </LanguageProvider>
       </body>
     </html>
