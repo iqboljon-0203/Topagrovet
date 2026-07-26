@@ -1,6 +1,7 @@
 .hero {
   position: relative;
-  height: 450px;
+  height: calc(100vh - 162px);
+  min-height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -147,12 +148,12 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero { height: 420px; }
+  .hero { height: calc(100vh - 162px); min-height: 420px; }
   .heroTitle { font-size: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .hero { height: 380px; }
+  .hero { height: calc(100vh - 101px); min-height: 380px; }
   .heroBg { object-position: 60% 38%; }
   .overlay {
     background: rgba(255, 255, 255, 0.82);
@@ -186,7 +187,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero { height: auto; min-height: 400px; padding: 40px 0; }
+  .hero { height: auto; min-height: calc(100vh - 101px); padding: 40px 0; }
   .heroTitle { font-size: 1.6rem; }
   .heroSubtitle { font-size: 1rem; }
   .heroTrust { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; }
