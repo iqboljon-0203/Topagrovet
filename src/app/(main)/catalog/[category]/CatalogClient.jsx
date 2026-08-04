@@ -66,10 +66,6 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
     return filtered;
   }, [products, categorySlug, activeSubcat, priceRange, sortBy]);
 
-  if (loading) {
-    return <div style={{ padding: '4rem', textAlign: 'center' }}>{isRu ? 'Загрузка...' : 'Yuklanmoqda...'}</div>;
-  }
-
   return (
     <div className={styles.page}>
       {/* Hero Banner */}
