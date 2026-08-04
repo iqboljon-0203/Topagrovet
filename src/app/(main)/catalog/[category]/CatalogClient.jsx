@@ -1,17 +1,32 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { ChevronRight, Heart, ShoppingCart, Grid3X3, List, Bug, Leaf, Sprout, Droplets, FlaskConical, Pill, Shield, Heart as HeartIcon, Thermometer, SprayCan, Zap, Download } from 'lucide-react';
 import ScrollReveal from '@/components/3d/ScrollReveal';
 import ProductTilt from '@/components/3d/ProductTilt';
-import categories from '@/data/categories.json';
 import { formatPrice, getSubcategoryBadgeClass } from '@/lib/utils';
-import { supabase } from '@/lib/supabaseClient';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './catalog.module.css';
+
+// Agro preparatlar uchun turlar
+const AGRO_ACTIVE_INGREDIENTS = [
+  { uz: 'Insektitsid', ru: 'Инсектицид' },
+  { uz: 'Fungitsid', ru: 'Фунгицид' },
+  { uz: 'Gerbitsid', ru: 'Гербицид' },
+  { uz: 'Insektoakaratsid', ru: 'Инсектоакарацид' },
+  { uz: 'Mikroelementlar', ru: 'Микроэлементы' },
+];
+
+// Veterinariya uchun turlar
+const VET_ACTIVE_INGREDIENTS = [
+  { uz: 'Antibiotiklar', ru: 'Антибиотики' },
+  { uz: 'Antiparazitar', ru: 'Антипаразитарные' },
+  { uz: 'Vitaminlar', ru: 'Витамины' },
+  { uz: 'Dezinfeksiya', ru: 'Дезинфекция' },
+  { uz: 'Akusherlik', ru: 'Акушерские' },
+];
 
 const iconMap = {
   bug: Bug, leaf: Leaf, sprout: Sprout, droplets: Droplets, flask: FlaskConical,
@@ -38,6 +53,15 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
   const [activeSubcat, setActiveSubcat] = useState('barchasi');
   const [priceRange, setPriceRange] = useState(1000000);
   const [sortBy, setSortBy] = useState('popular');
+  const [activeIngredientFilter, setActiveIngredientFilter] = useState('');
+  const [manufacturerFilter, setManufacturerFilter] = useState('');
+
+  // Kategoriyaga qarab filtr variantlarini belgilash
+  const isVet = categorySlug === 'veterinariya';
+  const activeIngredients = isVet ? VET_ACTIVE_INGREDIENTS : AGRO_ACTIVE_INGREDIENTS;
+  const manufacturers = isVet 
+    ? [{ uz: 'Veyong', ru: 'Veyong' }] 
+    : [{ uz: 'Montajat', ru: 'Montajat' }, { uz: 'Veyong', ru: 'Veyong' }];
 
   const catLabel = mainCategory ? val(mainCategory.name, mainCategory.name_ru) : (isRu ? 'Все продукты' : 'Barcha mahsulotlar');
   const bgImage = mainCategory && mainCategory.type === 'agro' ? '/catalog-agro-bg.png' : '/catalog-vet-bg.png';
@@ -53,6 +77,19 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
       filtered = filtered.filter(p => p.subcategory === activeSubcat);
     }
 
+    if (activeIngredientFilter) {
+      filtered = filtered.filter(p => 
+        (p.activeIngredient || '').toLowerCase().includes(activeIngredientFilter.toLowerCase()) ||
+        (p.subcategoryLabel || '').toLowerCase().includes(activeIngredientFilter.toLowerCase())
+      );
+    }
+
+    if (manufacturerFilter) {
+      filtered = filtered.filter(p => 
+        (p.manufacturer || '').toLowerCase().includes(manufacturerFilter.toLowerCase())
+      );
+    }
+
     filtered = filtered.filter(p => p.price <= priceRange);
 
     if (sortBy === 'price-asc') {
@@ -64,7 +101,7 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
     }
 
     return filtered;
-  }, [products, categorySlug, activeSubcat, priceRange, sortBy]);
+  }, [products, categorySlug, activeSubcat, priceRange, sortBy, activeIngredientFilter, manufacturerFilter]);
 
   return (
     <div className={styles.page}>
@@ -124,23 +161,30 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
             <h3 className={styles.sidebarTitle}>{isRu ? 'Фильтр' : 'Filtr'}</h3>
 
             <div className={styles.filterGroup}>
-              <label className={styles.filterLabel}>{isRu ? 'Активное вещество' : 'Faol moddasi'}</label>
-              <select className={styles.filterSelect}>
-                <option>{isRu ? 'Выберите' : 'Tanlang'}</option>
-                <option>Imidakloprid</option>
-                <option>Oksitetrasiklin</option>
-                <option>Glyposate</option>
-                <option>Albendazol</option>
+              <label className={styles.filterLabel}>{isRu ? 'Вид препарата' : 'Preparat turi'}</label>
+              <select 
+                className={styles.filterSelect}
+                value={activeIngredientFilter}
+                onChange={(e) => setActiveIngredientFilter(e.target.value)}
+              >
+                <option value="">{isRu ? 'Барча турлар' : 'Barcha turlar'}</option>
+                {activeIngredients.map((item, i) => (
+                  <option key={i} value={item.uz}>{isRu ? item.ru : item.uz}</option>
+                ))}
               </select>
             </div>
 
             <div className={styles.filterGroup}>
               <label className={styles.filterLabel}>{isRu ? 'Производитель' : 'Ishlab chiqaruvchi'}</label>
-              <select className={styles.filterSelect}>
-                <option>{isRu ? 'Выберите' : 'Tanlang'}</option>
-                <option>MS Pharma</option>
-                <option>Syngenta</option>
-                <option>Bayer CropScience</option>
+              <select 
+                className={styles.filterSelect}
+                value={manufacturerFilter}
+                onChange={(e) => setManufacturerFilter(e.target.value)}
+              >
+                <option value="">{isRu ? 'Все производители' : 'Barcha ishlab chiqaruvchilar'}</option>
+                {manufacturers.map((m, i) => (
+                  <option key={i} value={m.uz}>{isRu ? m.ru : m.uz}</option>
+                ))}
               </select>
             </div>
 
@@ -164,8 +208,12 @@ export default function CatalogClient({ initialCategories, initialProducts, cate
             </div>
 
             <div className={styles.filterBtns}>
-              <button className={styles.filterBtnApply}>{isRu ? 'Применить' : 'Qo\'llash'}</button>
-              <button className={styles.filterBtnReset} onClick={() => { setActiveSubcat('barchasi'); setPriceRange(1000000); }}>
+              <button className={styles.filterBtnReset} onClick={() => { 
+                setActiveSubcat('barchasi'); 
+                setPriceRange(1000000); 
+                setActiveIngredientFilter('');
+                setManufacturerFilter('');
+              }}>
                 {isRu ? 'Очистить' : 'Tozalash'}
               </button>
             </div>

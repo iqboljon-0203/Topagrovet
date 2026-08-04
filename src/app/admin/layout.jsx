@@ -25,6 +25,7 @@ import {
   Info,
   Menu,
   X,
+  Users,
 } from 'lucide-react';
 import styles from './admin.module.css';
 
@@ -355,6 +356,15 @@ export default function AdminLayout({ children }) {
               <MessageSquare size={16} />
             </span>
             Xabarlar
+          </Link>
+          <Link
+            href="/admin/specialists"
+            className={`${styles.sidebarLink} ${pathname.startsWith('/admin/specialists') ? styles.sidebarLinkActive : ''}`}
+          >
+            <span className={styles.sidebarLinkIcon}>
+              <Users size={16} />
+            </span>
+            Mutaxassislar
           </Link>
         </nav>
 

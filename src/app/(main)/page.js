@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection';
 import CategoriesSection from '@/components/home/CategoriesSection';
 import FeaturesBar from '@/components/home/FeaturesBar';
 import PopularProducts from '@/components/home/PopularProducts';
+import SpecialistsSection from '@/components/home/SpecialistsSection';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -25,6 +26,7 @@ export default async function Home() {
       <CategoriesSection categoriesData={catRes.data} />
       <FeaturesBar />
       <PopularProducts initialProducts={popRes.data || []} />
+      <SpecialistsSection />
     </>
   );
 }
