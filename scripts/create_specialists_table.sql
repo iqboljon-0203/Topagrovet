@@ -25,6 +25,9 @@ INSERT INTO specialists (name, name_ru, role, role_ru, phone, telegram_link, typ
 -- Row Level Security (RLS) — hamma ko'ra olsin
 ALTER TABLE specialists ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Allow public read" ON specialists;
+DROP POLICY IF EXISTS "Allow auth users to manage" ON specialists;
+
 CREATE POLICY "Allow public read" ON specialists
   FOR SELECT USING (TRUE);
 

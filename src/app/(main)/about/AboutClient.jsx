@@ -49,6 +49,43 @@ export default function AboutClient({ data }) {
           </div>
         </div>
       </section>
+      {/* Hamkorlar (Partners) Section */}
+      <section id="hamkorlar" className={styles.partners}>
+        <div className={styles.container}>
+          <h2 className={styles.partnersTitle}>
+            {isRu ? 'Наши партнёры' : 'Bizning hamkorlar'}
+          </h2>
+          <p className={styles.partnersSubtitle}>
+            {isRu 
+              ? 'Мы являемся официальным дистрибьютором ведущих производителей ветеринарных и агро препаратов'
+              : 'Biz yetakchi veterinariya va agro preparatlar ishlab chiqaruvchilarining rasmiy distribyutorimiz'}
+          </p>
+          <div className={styles.partnersGrid}>
+            <div className={styles.partnerCard}>
+              <div className={styles.partnerLogo}>
+                <span className={styles.partnerName}>Montajat</span>
+                <span className={styles.partnerCountry}>🇸🇦 Saudiya Arabistoni</span>
+              </div>
+              <p className={styles.partnerDesc}>
+                {isRu 
+                  ? 'Ведущий производитель агрохимикатов Саудовской Аравии. Широкий ассортимент инсектицидов, фунгицидов и гербицидов.'
+                  : 'Saudiya Arabistonining yetakchi agrokimyo mahsulotlari ishlab chiqaruvchisi. Insektisid, fungisid va gerbisidlarning keng assortimenti.'}
+              </p>
+            </div>
+            <div className={styles.partnerCard}>
+              <div className={styles.partnerLogo}>
+                <span className={styles.partnerName}>Veyong</span>
+                <span className={styles.partnerCountry}>🇨🇳 Xitoy</span>
+              </div>
+              <p className={styles.partnerDesc}>
+                {isRu 
+                  ? 'Крупный производитель ветеринарных и агрохимических препаратов. Сертифицированная продукция международного качества.'
+                  : 'Veterinariya va agrokimyo preparatlarining yirik ishlab chiqaruvchisi. Xalqaro sifat sertifikatlangan mahsulotlar.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

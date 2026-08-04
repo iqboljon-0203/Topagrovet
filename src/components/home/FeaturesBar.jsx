@@ -20,7 +20,7 @@ const DEFAULT_FEATURES = [
     titleRu: 'Надёжные бренды',
     descUz: 'Montajat va Veyong',
     descRu: 'Montajat и Veyong',
-    href: '/catalog/barchasi',
+    href: '/about#hamkorlar',
   },
   {
     icon: Truck,
