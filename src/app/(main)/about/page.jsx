@@ -31,6 +31,8 @@ export default async function AboutPage() {
     why_item3: 'Mutaxassis maslahati: Tajribali agronom va veterinar shifokorlarimiz sizga bepul maslahat beradi.',
     why_item4: 'Tezkor yetkazib berish: Respublika bo\'ylab yetkazib berish xizmati.',
     image_url: '/hero-bg.png',
+    partner1_logo: '',
+    partner2_logo: '',
   };
 
   return <AboutClient data={data} />;

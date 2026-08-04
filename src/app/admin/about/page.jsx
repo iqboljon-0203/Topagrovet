@@ -27,6 +27,8 @@ export default function AdminAboutPage() {
     why_item3_ru: '',
     why_item4_ru: '',
     image_url: '',
+    partner1_logo: '',
+    partner2_logo: '',
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -64,6 +66,8 @@ export default function AdminAboutPage() {
           why_item3_ru: data.why_item3_ru || '',
           why_item4_ru: data.why_item4_ru || '',
           image_url: data.image_url || '',
+          partner1_logo: data.partner1_logo || '',
+          partner2_logo: data.partner2_logo || '',
         });
         setRecordId(data.id);
       }
@@ -281,6 +285,66 @@ export default function AdminAboutPage() {
             <div className={styles.contactField}>
               <label>Yoki URL manzilini kiriting</label>
               <input type="text" value={aboutData.image_url} onChange={(e) => handleChange('image_url', e.target.value)} placeholder="/hero-bg.png" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.contactCard}>
+          <div className={styles.contactCardHeader}>
+            <div className={styles.contactCardIconGreen}><ImageIcon size={18} /></div>
+            <h3>Hamkor logolari (Rasm yuklash)</h3>
+          </div>
+          <div className={styles.contactCardBody}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              {/* Montajat */}
+              <div>
+                <p style={{ fontWeight: 600, marginBottom: '8px', color: '#374151' }}>1. Montajat logosi</p>
+                {aboutData.partner1_logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={aboutData.partner1_logo} alt="Montajat" style={{ maxWidth: '140px', maxHeight: '70px', objectFit: 'contain', marginBottom: '8px', borderRadius: '6px', border: '1px solid #e5e7eb', padding: '4px' }} />
+                )}
+                <div className={styles.contactField}>
+                  <label>Rasm yuklash (fayl)</label>
+                  <input type="file" accept="image/*" onChange={async (e) => {
+                    if (!e.target.files?.[0]) return;
+                    const file = e.target.files[0];
+                    const fileName = `partners/${Date.now()}_${file.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+                    const { data, error } = await supabase.storage.from('products').upload(fileName, file);
+                    if (!error) {
+                      const { data: pub } = supabase.storage.from('products').getPublicUrl(fileName);
+                      handleChange('partner1_logo', pub.publicUrl);
+                    }
+                  }} style={{ padding: '6px 0' }} />
+                </div>
+                <div className={styles.contactField}>
+                  <label>Yoki URL</label>
+                  <input type="text" value={aboutData.partner1_logo} onChange={(e) => handleChange('partner1_logo', e.target.value)} placeholder="https://..." />
+                </div>
+              </div>
+              {/* Veyong */}
+              <div>
+                <p style={{ fontWeight: 600, marginBottom: '8px', color: '#374151' }}>2. Veyong logosi</p>
+                {aboutData.partner2_logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={aboutData.partner2_logo} alt="Veyong" style={{ maxWidth: '140px', maxHeight: '70px', objectFit: 'contain', marginBottom: '8px', borderRadius: '6px', border: '1px solid #e5e7eb', padding: '4px' }} />
+                )}
+                <div className={styles.contactField}>
+                  <label>Rasm yuklash (fayl)</label>
+                  <input type="file" accept="image/*" onChange={async (e) => {
+                    if (!e.target.files?.[0]) return;
+                    const file = e.target.files[0];
+                    const fileName = `partners/${Date.now()}_${file.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+                    const { data, error } = await supabase.storage.from('products').upload(fileName, file);
+                    if (!error) {
+                      const { data: pub } = supabase.storage.from('products').getPublicUrl(fileName);
+                      handleChange('partner2_logo', pub.publicUrl);
+                    }
+                  }} style={{ padding: '6px 0' }} />
+                </div>
+                <div className={styles.contactField}>
+                  <label>Yoki URL</label>
+                  <input type="text" value={aboutData.partner2_logo} onChange={(e) => handleChange('partner2_logo', e.target.value)} placeholder="https://..." />
+                </div>
+              </div>
             </div>
           </div>
         </div>

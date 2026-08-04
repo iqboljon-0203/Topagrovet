@@ -169,6 +169,12 @@
   margin-bottom: 1.25rem;
 }
 
+.partnerImgWrap {
+  position: relative;
+  width: 160px;
+  height: 80px;
+}
+
 .partnerName {
   font-size: 2rem;
   font-weight: 800;

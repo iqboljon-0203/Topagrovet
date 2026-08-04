@@ -61,9 +61,22 @@ export default function AboutClient({ data }) {
               : 'Biz yetakchi veterinariya va agro preparatlar ishlab chiqaruvchilarining rasmiy distribyutorimiz'}
           </p>
           <div className={styles.partnersGrid}>
+            {/* Montajat */}
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogo}>
-                <span className={styles.partnerName}>Montajat</span>
+                {data.partner1_logo ? (
+                  <div className={styles.partnerImgWrap}>
+                    <Image
+                      src={data.partner1_logo}
+                      alt="Montajat"
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      unoptimized
+                    />
+                  </div>
+                ) : (
+                  <span className={styles.partnerName}>Montajat</span>
+                )}
                 <span className={styles.partnerCountry}>🇸🇦 Saudiya Arabistoni</span>
               </div>
               <p className={styles.partnerDesc}>
@@ -72,9 +85,22 @@ export default function AboutClient({ data }) {
                   : 'Saudiya Arabistonining yetakchi agrokimyo mahsulotlari ishlab chiqaruvchisi. Insektisid, fungisid va gerbisidlarning keng assortimenti.'}
               </p>
             </div>
+            {/* Veyong */}
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogo}>
-                <span className={styles.partnerName}>Veyong</span>
+                {data.partner2_logo ? (
+                  <div className={styles.partnerImgWrap}>
+                    <Image
+                      src={data.partner2_logo}
+                      alt="Veyong"
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      unoptimized
+                    />
+                  </div>
+                ) : (
+                  <span className={styles.partnerName}>Veyong</span>
+                )}
                 <span className={styles.partnerCountry}>🇨🇳 Xitoy</span>
               </div>
               <p className={styles.partnerDesc}>
