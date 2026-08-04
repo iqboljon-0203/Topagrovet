@@ -8,24 +8,9 @@ import { ArrowRight, CheckCircle, ShieldCheck, Headphones } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './HeroSection.module.css';
 
-export default function HeroSection() {
+export default function HeroSection({ heroData }) {
   const { language } = useLanguage();
-  const [hero, setHero] = useState(null);
-
-  useEffect(() => {
-    async function fetchHero() {
-      const { data, error } = await supabase
-        .from('hero_settings')
-        .select('*')
-        .limit(1)
-        .single();
-
-      if (!error && data) {
-        setHero(data);
-      }
-    }
-    fetchHero();
-  }, []);
+  const hero = heroData;
 
   // Fallback qiymatlar
   const h = hero || {

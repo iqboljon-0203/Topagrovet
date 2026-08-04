@@ -10,24 +10,9 @@ import styles from './CategoriesSection.module.css';
 const vetIcons = [Shield, Pill, Heart, Droplets, SprayCan, Thermometer];
 const agroIcons = [Bug, Shield, Leaf, Sprout, FlaskConical, Grid3X3];
 
-export default function CategoriesSection() {
+export default function CategoriesSection({ categoriesData }) {
   const { language } = useLanguage();
-  const [catData, setCatData] = useState(null);
-
-  useEffect(() => {
-    async function fetchCategories() {
-      const { data, error } = await supabase
-        .from('categories_settings')
-        .select('*')
-        .limit(1)
-        .single();
-
-      if (!error && data) {
-        setCatData(data);
-      }
-    }
-    fetchCategories();
-  }, []);
+  const catData = categoriesData;
 
   // Fallback
   const c = catData || {

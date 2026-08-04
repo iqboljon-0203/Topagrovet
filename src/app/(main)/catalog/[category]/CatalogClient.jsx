@@ -19,56 +19,25 @@ const iconMap = {
   zap: Zap, grid: Grid3X3,
 };
 
-export default function CatalogPage() {
+export default function CatalogClient({ initialCategories, initialProducts, categorySlug }) {
   const { language, t } = useLanguage();
   const isRu = language === 'ru';
   const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
 
-  const params = useParams();
-  const categorySlug = params.category;
-
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [mainCategory, setMainCategory] = useState(null);
-  const [subcategories, setSubcategories] = useState([]);
+  const categories = initialCategories || [];
+  const products = initialProducts || [];
   
-  const [loading, setLoading] = useState(true);
+  const mainCategory = categorySlug !== 'barchasi' 
+    ? categories.find(c => c.slug === categorySlug && !c.parent_id) 
+    : null;
+    
+  const subcategories = mainCategory 
+    ? categories.filter(c => c.parent_id === mainCategory.id) 
+    : [];
+
   const [activeSubcat, setActiveSubcat] = useState('barchasi');
   const [priceRange, setPriceRange] = useState(1000000);
   const [sortBy, setSortBy] = useState('popular');
-
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      // Fetch categories
-      const { data: cats, error: catErr } = await supabase.from('product_categories').select('*');
-      if (cats && !catErr) {
-        setCategories(cats);
-        if (categorySlug !== 'barchasi') {
-          const main = cats.find(c => c.slug === categorySlug && !c.parent_id);
-          setMainCategory(main || null);
-          if (main) {
-            setSubcategories(cats.filter(c => c.parent_id === main.id));
-          }
-        } else {
-          setMainCategory(null);
-          setSubcategories([]);
-        }
-      }
-      
-      // Fetch products
-      const { data: prods, error: prodErr } = await supabase
-        .from('products')
-        .select('*')
-        .order('created_at', { ascending: false });
-        
-      if (prods && !prodErr) {
-        setProducts(prods);
-      }
-      setLoading(false);
-    }
-    fetchData();
-  }, [categorySlug]);
 
   const catLabel = mainCategory ? val(mainCategory.name, mainCategory.name_ru) : (isRu ? 'Все продукты' : 'Barcha mahsulotlar');
   const bgImage = mainCategory && mainCategory.type === 'agro' ? '/catalog-agro-bg.png' : '/catalog-vet-bg.png';

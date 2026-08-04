@@ -21,60 +21,19 @@ const getTabs = (isRu) => [
   { id: 'reviews', label: isRu ? 'Отзывы' : 'Sharhlar' },
 ];
 
-export default function ProductPage() {
+export default function ProductClient({ initialProduct, initialSimilar }) {
   const { language, t } = useLanguage();
   const isRu = language === 'ru';
   const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
   const tabs = getTabs(isRu);
-  const params = useParams();
-  const [product, setProduct] = useState(null);
-  const [similar, setSimilar] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
+  const product = initialProduct;
+  const similar = initialSimilar || [];
+  
   const [activeTab, setActiveTab] = useState('description');
-  const [selectedVolume, setSelectedVolume] = useState('');
-
-  useEffect(() => {
-    async function loadProduct() {
-      const { data, error } = await supabase
-        .from('products')
-        .select('*')
-        .eq('slug', params.slug)
-        .single();
-        
-      if (data && !error) {
-        setProduct({
-          ...data,
-          volumes: data.volumes || [],
-          specifications: data.specifications || {},
-          specifications_ru: data.specifications_ru || {},
-          tabContent: data.tabContent || { description: data.description || '', usage: '', dosage: '', safety: '', docs: '', crops: [] },
-          tabContent_ru: data.tabContent_ru || { description: data.description_ru || '', usage: '', dosage: '', safety: '', docs: '', crops: [] },
-        });
-        if (data.volumes?.length > 0) {
-          setSelectedVolume(data.selectedVolume || data.volumes[0]);
-        }
-        
-        // Fetch similar (same category, different id)
-        const { data: similarData } = await supabase
-          .from('products')
-          .select('*')
-          .eq('category', data.category)
-          .neq('id', data.id)
-          .limit(4);
-          
-        if (similarData) setSimilar(similarData);
-      }
-      setLoading(false);
-    }
-    
-    if (params?.slug) {
-      loadProduct();
-    }
-  }, [params?.slug]);
-
-  if (loading) {
-    return <div style={{ padding: '4rem', textAlign: 'center' }}>{isRu ? 'Загрузка...' : 'Yuklanmoqda...'}</div>;
-  }
+  const [selectedVolume, setSelectedVolume] = useState(
+    product?.volumes?.length > 0 ? (product.selectedVolume || product.volumes[0]) : ''
+  );
 
   if (!product) {
     return (

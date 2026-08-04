@@ -9,28 +9,10 @@ import { getCategoryBadgeClass } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 import styles from './PopularProducts.module.css';
 
-export default function PopularProducts() {
+export default function PopularProducts({ initialProducts }) {
   const { language, t } = useLanguage();
   const scrollRef = useRef(null);
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchPopular() {
-      const { data, error } = await supabase
-        .from('products')
-        .select('*')
-        .eq('is_popular', true)
-        .order('rating', { ascending: false })
-        .limit(10);
-        
-      if (data && !error) {
-        setProducts(data);
-      }
-      setLoading(false);
-    }
-    fetchPopular();
-  }, []);
+  const products = initialProducts || [];
 
   const scroll = (dir) => {
     if (scrollRef.current) {
@@ -38,7 +20,7 @@ export default function PopularProducts() {
     }
   };
 
-  if (loading) return null;
+  if (!products.length) return null;
 
   return (
     <section className={styles.section}>
