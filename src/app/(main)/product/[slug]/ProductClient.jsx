@@ -7,9 +7,10 @@ import { useParams } from 'next/navigation';
 import { ChevronRight, Star, CheckCircle2, ShoppingCart, Zap, Download, Phone, Send, MessageCircle, Heart, ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ScrollReveal from '@/components/3d/ScrollReveal';
-import { formatPrice, getSubcategoryBadgeClass, getSimilarProducts } from '@/lib/utils';
-import { supabase } from '@/lib/supabaseClient';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
+import { formatPrice, getSubcategoryBadgeClass } from '@/lib/utils';
+import QuickOrderModal from '@/components/product/QuickOrderModal';
 import styles from './product.module.css';
 
 const getTabs = (isRu) => [
@@ -23,6 +24,7 @@ const getTabs = (isRu) => [
 
 export default function ProductClient({ initialProduct, initialSimilar }) {
   const { language, t } = useLanguage();
+  const { addToCart } = useCart();
   const isRu = language === 'ru';
   const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
   const tabs = getTabs(isRu);
@@ -31,6 +33,7 @@ export default function ProductClient({ initialProduct, initialSimilar }) {
   const similar = initialSimilar || [];
   
   const [activeTab, setActiveTab] = useState('description');
+  const [isQuickOrderOpen, setIsQuickOrderOpen] = useState(false);
   const [selectedVolume, setSelectedVolume] = useState(
     product?.volumes?.length > 0 ? (product.selectedVolume || product.volumes[0]) : ''
   );
@@ -156,21 +159,21 @@ export default function ProductClient({ initialProduct, initialSimilar }) {
 
               {/* Action Buttons */}
               <div className={styles.actionBtns}>
-                <button className={styles.addToCartBtn}>
+                <button 
+                  className={styles.addToCartBtn}
+                  onClick={() => addToCart(product, 1, selectedVolume)}
+                >
                   <ShoppingCart size={18} />
                   {t('product.add_to_cart')}
                 </button>
-                <button className={styles.quickOrderBtn}>
+                <button 
+                  className={styles.quickOrderBtn}
+                  onClick={() => setIsQuickOrderOpen(true)}
+                >
                   <Zap size={18} />
                   {t('product.quick_order')}
                 </button>
               </div>
-
-              {/* PDF Download */}
-              <button className={styles.pdfBtn}>
-                <Download size={16} />
-                {t('product.download_pdf')}
-              </button>
 
               {/* Specifications */}
               <table className={styles.specsTable}>
@@ -269,26 +272,27 @@ export default function ProductClient({ initialProduct, initialSimilar }) {
               <div className={styles.contactSidebar}>
                 <div className={styles.contactCard}>
                   <h3 className={styles.contactTitle}>{isRu ? 'Связаться со специалистом' : 'Mutaxassis bilan bog\'lanish'}</h3>
-                  <p className={styles.contactDesc}>
-                    {isRu ? 'Есть вопросы о продукте? Наши специалисты помогут вам.' : 'Mahsulot haqida savollaringiz bormi? Mutaxassislarimiz sizga yordam beradilar.'}
+                  <p className={styles.contactDesc} style={{ marginBottom: '1rem' }}>
+                    <strong>{isRu ? 'Асатуллаев Музафархон' : 'Asatullaev Muzaffarxon'}</strong><br/>
+                    {isRu ? 'Ответит на ваши вопросы и поможет с выбором.' : 'Savollaringizga javob beradilar va tanlashda yordam beradilar.'}
                   </p>
-                  <div className={styles.contactPhone}>
+                  <a href="tel:+998997868000" className={styles.contactPhone} style={{ textDecoration: 'none' }}>
                     <Phone size={20} />
-                    +998 90 123 45 67
-                  </div>
-                  <button className={styles.telegramBtn}>
+                    +998 99 786 80 00
+                  </a>
+                  <a href="https://t.me/Muzaffarxon098" target="_blank" rel="noopener noreferrer" className={styles.telegramBtn} style={{ textDecoration: 'none' }}>
                     <Send size={16} />
-                    {isRu ? 'Написать в Telegram' : 'Telegram orqali yozing'}
-                  </button>
-                  <button className={styles.whatsappBtn}>
-                    <MessageCircle size={16} />
-                    {isRu ? 'Написать в WhatsApp' : 'WhatsApp orqali yozing'}
-                  </button>
+                    {isRu ? 'Написать в Telegram' : 'Telegram orqali yozish'}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
       </div>
+
+      {isQuickOrderOpen && (
+        <QuickOrderModal product={product} volume={selectedVolume} onClose={() => setIsQuickOrderOpen(false)} />
+      )}
 
       {/* Similar Products */}
       {similar.length > 0 && (

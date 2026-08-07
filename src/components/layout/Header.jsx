@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, Search, ChevronDown, X, Menu } from 'lucide-react';
+import { Phone, Search, ChevronDown, X, Menu, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
 import { supabase } from '@/lib/supabaseClient';
 import styles from './Header.module.css';
 
@@ -30,6 +31,7 @@ export default function Header() {
   const [contactInfo, setContactInfo] = useState(null);
   const pathname = usePathname();
   const { language, t } = useLanguage();
+  const { itemCount, toggleCart } = useCart();
   const isRu = language === 'ru';
   const val = (uzStr, ruStr) => isRu && ruStr ? ruStr : uzStr;
 
@@ -85,6 +87,11 @@ export default function Header() {
               <div className={styles.phoneHours}>{val(contactInfo?.work_hours, contactInfo?.work_hours_ru) || (isRu ? 'Ежедневно 08:00 - 18:00' : 'Har kuni 08:00 - 18:00')}</div>
             </div>
           </div>
+
+          <button className={styles.cartBtn} onClick={toggleCart} aria-label="Savatcha">
+            <ShoppingCart size={22} />
+            {itemCount > 0 && <span className={styles.cartBadge}>{itemCount}</span>}
+          </button>
 
           <button className={styles.hamburger} onClick={() => setMobileOpen(true)} aria-label="Menyu">
             <Menu size={22} />

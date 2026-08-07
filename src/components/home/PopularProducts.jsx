@@ -7,10 +7,12 @@ import { ArrowRight, ChevronLeft, ChevronRight, Heart, ShoppingCart } from 'luci
 import { supabase } from '@/lib/supabaseClient';
 import { getCategoryBadgeClass } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
 import styles from './PopularProducts.module.css';
 
-export default function PopularProducts({ initialProducts }) {
+export default function PopularProducts({ initialProducts, titleKey = 'home.popular_title', categoryPath = 'barchasi' }) {
   const { language, t } = useLanguage();
+  const { addToCart } = useCart();
   const scrollRef = useRef(null);
   const products = initialProducts || [];
 
@@ -25,9 +27,9 @@ export default function PopularProducts({ initialProducts }) {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <h2 className={styles.title}>{t('home.popular_title')}</h2>
+        <h2 className={styles.title}>{t(titleKey)}</h2>
         <div className={styles.headerRight}>
-          <Link href="/catalog/barchasi" className={styles.viewAll}>
+          <Link href={`/catalog/${categoryPath}`} className={styles.viewAll}>
             {t('home.view_all')}
           </Link>
           <div className={styles.arrows}>
@@ -70,7 +72,15 @@ export default function PopularProducts({ initialProducts }) {
                   <Link href={`/product/${product.slug}`} className={styles.detailLink}>
                     {language === 'ru' ? 'Подробнее' : 'Batafsil'} <ArrowRight size={13} />
                   </Link>
-                  <button className={styles.cartBtn} aria-label="Savatga">
+                  <button 
+                    className={styles.cartBtn} 
+                    aria-label="Savatga"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      addToCart(product);
+                    }}
+                  >
                     <ShoppingCart size={16} />
                   </button>
                 </div>

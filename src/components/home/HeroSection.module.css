@@ -23,13 +23,6 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.93) 28%,
-    rgba(255, 255, 255, 0.55) 42%,
-    rgba(255, 255, 255, 0.0) 58%
-  );
 }
 
 /* Text content — left side on top of overlay */
@@ -156,7 +149,7 @@
   .hero { height: calc(100vh - 101px); min-height: 380px; }
   .heroBg { object-position: 60% 38%; }
   .overlay {
-    background: rgba(255, 255, 255, 0.82);
+    background: transparent;
   }
   .heroContent { 
     max-width: 100%; 

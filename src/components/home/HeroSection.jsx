@@ -34,7 +34,7 @@ export default function HeroSection({ heroData }) {
     <section className={styles.hero}>
       {/* Full-width background image */}
       <Image
-        src="/herobg.png"
+        src="/herobg.jpeg"
         alt="Veterinariya va agro mahsulotlar"
         fill
         className={styles.heroBg}

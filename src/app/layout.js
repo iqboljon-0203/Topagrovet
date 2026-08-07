@@ -72,12 +72,18 @@ export const metadata = {
   },
 };
 
+import { CartProvider } from '@/context/CartContext';
+import CartSidebar from '@/components/cart/CartSidebar';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="uz">
       <body>
         <LanguageProvider>
-          {children}
+          <CartProvider>
+            {children}
+            <CartSidebar />
+          </CartProvider>
         </LanguageProvider>
       </body>
     </html>

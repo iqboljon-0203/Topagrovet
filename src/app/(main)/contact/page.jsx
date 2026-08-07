@@ -38,6 +38,7 @@ export default function ContactPage() {
     setSending(true);
     setError('');
 
+    // Save to database
     const { error } = await supabase
       .from('contact_messages')
       .insert([{
@@ -47,8 +48,24 @@ export default function ContactPage() {
       }]);
 
     if (error) {
-      setError('Xabar yuborishda xatolik yuz berdi. Qayta urinib ko\'ring.');
+      setError(isRu ? 'Ошибка при отправке. Попробуйте еще раз.' : 'Xabar yuborishda xatolik yuz berdi. Qayta urinib ko\'ring.');
     } else {
+      // Send to Telegram
+      try {
+        await fetch('/api/order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'contact_message',
+            name: formData.name,
+            phone: formData.phone,
+            message: formData.message,
+          })
+        });
+      } catch (tgError) {
+        console.error('Failed to send Telegram notification:', tgError);
+      }
+
       setSent(true);
       setFormData({ name: '', phone: '', message: '' });
       setTimeout(() => setSent(false), 4000);

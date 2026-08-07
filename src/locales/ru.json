@@ -33,6 +33,8 @@
     "features_support_desc": "Бесплатная консультация ветеринара",
     "categories_title": "Каталог Продукции",
     "popular_title": "Популярные Товары",
+    "popular_vet_title": "Популярные Ветеринарные Препараты",
+    "popular_agro_title": "Популярные Агропрепараты",
     "view_all": "Смотреть все"
   },
   "product": {

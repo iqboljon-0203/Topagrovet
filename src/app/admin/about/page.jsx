@@ -94,16 +94,20 @@ export default function AdminAboutPage() {
     let finalImageUrl = aboutData.image_url;
     if (imageFile) {
       const fileName = `${Date.now()}_${imageFile.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
-      const { data, error } = await supabase.storage
+      const { data, error: uploadError } = await supabase.storage
         .from('products')
         .upload(`uploads/${fileName}`, imageFile);
 
-      if (!error) {
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(`uploads/${fileName}`);
-        finalImageUrl = publicUrlData.publicUrl;
+      if (uploadError) {
+        setError('Rasm yuklashda xatolik: ' + uploadError.message);
+        setSaving(false);
+        return;
       }
+
+      const { data: publicUrlData } = supabase.storage
+        .from('products')
+        .getPublicUrl(`uploads/${fileName}`);
+      finalImageUrl = publicUrlData.publicUrl;
     }
 
     const updateData = { ...aboutData, image_url: finalImageUrl, updated_at: new Date().toISOString() };

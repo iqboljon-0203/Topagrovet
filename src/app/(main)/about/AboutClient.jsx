@@ -64,7 +64,7 @@ export default function AboutClient({ data }) {
             {/* Montajat */}
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogo}>
-                {data.partner1_logo ? (
+                {data.partner1_logo && (
                   <div className={styles.partnerImgWrap}>
                     <Image
                       src={data.partner1_logo}
@@ -74,9 +74,8 @@ export default function AboutClient({ data }) {
                       unoptimized
                     />
                   </div>
-                ) : (
-                  <span className={styles.partnerName}>Montajat</span>
                 )}
+                <span className={styles.partnerName}>Montajat</span>
                 <span className={styles.partnerCountry}>🇸🇦 Saudiya Arabistoni</span>
               </div>
               <p className={styles.partnerDesc}>
@@ -88,7 +87,7 @@ export default function AboutClient({ data }) {
             {/* Veyong */}
             <div className={styles.partnerCard}>
               <div className={styles.partnerLogo}>
-                {data.partner2_logo ? (
+                {data.partner2_logo && (
                   <div className={styles.partnerImgWrap}>
                     <Image
                       src={data.partner2_logo}
@@ -98,9 +97,8 @@ export default function AboutClient({ data }) {
                       unoptimized
                     />
                   </div>
-                ) : (
-                  <span className={styles.partnerName}>Veyong</span>
                 )}
+                <span className={styles.partnerName}>Veyong</span>
                 <span className={styles.partnerCountry}>🇨🇳 Xitoy</span>
               </div>
               <p className={styles.partnerDesc}>

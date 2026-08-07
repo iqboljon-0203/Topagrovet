@@ -90,7 +90,13 @@ export default function SpecialistsSection() {
                 <div className={`${styles.typeBadge} ${spec.type === 'vet' ? styles.vetBadge : styles.agroBadge}`}>
                   {spec.type === 'vet' 
                     ? <><HeartPulse size={12} /> {isRu ? 'Ветеринар' : 'Veterinar'}</>
-                    : <><Leaf size={12} /> {isRu ? 'Агроном' : 'Agronomist'}</>
+                    : spec.type === 'agro'
+                    ? <><Leaf size={12} /> {isRu ? 'Агроном' : 'Agronomist'}</>
+                    : spec.type === 'buxgalter'
+                    ? <><User size={12} /> {isRu ? 'Бухгалтер' : 'Buxgalter'}</>
+                    : spec.type === 'manager'
+                    ? <><User size={12} /> {isRu ? 'Менеджер' : 'Menejer'}</>
+                    : <><User size={12} /> {val(spec.role, spec.role_ru)}</>
                   }
                 </div>
               </div>
